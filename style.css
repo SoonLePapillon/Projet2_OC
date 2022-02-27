@@ -1,0 +1,433 @@
+@font-face {
+    font-family: Raleway;
+    src: url("Ressources/font/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("Ressources/font/Raleway-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (min-width:768px) {
+    .buttonIC {
+        display: none;
+    }
+}
+
+/* _____________________ DEBUT HEADER _____________________ */
+.bodyv {
+    font-family: Raleway;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin: 0 5% 0 5%;
+}
+
+.header1 {
+    display: flex;
+    flex-flow: row nowrap;
+    height: auto;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 0px;
+    order: 1;
+}
+
+.div_logo {
+    display: flex;
+    width: 10%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    background-color: white;
+}
+
+.listenav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.lienpuce {
+    max-width: 50%;
+    padding: 40px 0px 30px 0px;
+    flex-grow: 1;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.lienpuce1 {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+
+.lienpuce:hover {
+    color: #0065FC;
+    border-top: 3px solid #0065FC;
+}
+
+/* _____________________ FIN HEADER _____________________ */
+/* _____________________ DEBUT HEADER MAIN_____________________ */
+.headermain {
+    width: 100%;
+}
+
+.h2_1 {
+    margin: 5px 0px 3px 0px;
+    width: 100%;
+    background-color: white;
+}
+
+.p1 {
+    margin: 3px 0px 15px 0px;
+    width: auto;
+}
+
+.divBDR {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 45px;
+    margin: 0px 0px 10px 0px;
+}
+
+.formBDR {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+/* fin comparaison media et normal (25/02 23h20) */
+.labelBDR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 100%;
+    padding: 12px;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.dot {
+    font-size: 15px;
+}
+
+.saisieBDR {
+    width: 350px;
+    height: 100%;
+    border: 1px solid #F2F2F2;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: large;
+    outline: none;
+    /* Sert à retirer la bordure par défaut quand on clique sur la zone de saisie */
+
+}
+
+input::placeholder {
+    opacity: 100%;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.buttonBDR {
+    width: 100px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+}
+
+.buttonBDR:hover {
+    background-color: #0058dd;
+}
+
+.buttonBDR:active {
+    box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
+}
+
+/* _____________________ FIN HEADER MAIN _____________________ */
+/* _____________________ DEBUT BODY MAIN _____________________ */
+
+/* _____________________ DEBUT FILTRES _____________________ */
+
+.divfilter {
+    /* div des filtres */
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    font-variation-settings: 'wght'600;
+}
+
+.hfilter {
+    margin-right: 25px;
+}
+
+.listbtnfilter {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.icnfilter {
+    color: #0065FC;
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+.btnfilter {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: 3px solid #dadada;
+    margin: 5px 20px 5px 0px;
+    height: 55px;
+    padding: 0px 20px 0px 5px;
+    border-radius: 25px 25px 25px 25px;
+    font-variation-settings: 'wght'700;
+
+}
+
+.bordericn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 0px 0px 0px 0px;
+    background-color: #DEEBFF;
+    border: 3px solid #DEEBFF;
+    border-radius: 25px 25px 25px 25px;
+    position: relative;
+    right: 10px;
+    z-index: 2;
+}
+
+/* _____________________ FIN - FILTRES _____________________ */
+main {
+    display: flex;
+    flex-flow: column wrap;
+    order: 2;
+    flex-flow: row wrap;
+    width: 100%;
+    max-height: 90%;
+}
+
+footer {
+    background-color: rgb(185, 185, 212);
+    display: flex;
+    order: 3;
+    width: 100%;
+    height: auto;
+}
+
+/*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width:768px) {
+    body {
+        margin: 0px;
+    }
+
+    .bodyv {
+        margin-left: 2%;
+    }
+
+    .header1 {
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .div_logo {
+        display: flex;
+        width: 100%;
+    }
+
+    .lienpuce1 {
+        border-bottom: 3px solid #0065FC;
+        border-top: none;
+    }
+
+    .lienpuce:hover {
+        border-bottom: 3px solid #0065FC;
+        border-top: none;
+    }
+
+    /* _____________________ FIN HEADER _____________________ */
+    /* _____________________ DEBUT HEADER MAIN_____________________ */
+
+    .h2_1 {
+        margin: 5px 0px 3px 10px;
+    }
+
+    .divBDR {
+        margin-right: 10px;
+        height: 40px;
+    }
+
+    /* .formBDR {
+        width: 100%;
+    } à voir si le bouton search dépasse toujours à droite*/
+
+
+    /* fin comparaison media et normal (25/02 23h20) */
+    .labelBDR {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2F2F2;
+        height: 100%;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0px 0px 15px;
+        padding: 12px;
+        flex-grow: 2;
+        max-width: 45px;
+    }
+
+    .dot {
+        font-size: 15px;
+    }
+
+    .saisieBDR {
+        height: 100%;
+        flex-grow: 1;
+        border: 1px solid #F2F2F2;
+        padding-left: 10px;
+        font-weight: bold;
+        flex-grow: 1;
+        outline: none;
+        /* Sert à retirer la bordure par défaut quand on clique sur la zone de saisie */
+        padding-right: 20px;
+    }
+
+    input::placeholder {
+        opacity: 100%;
+        color: black;
+        font-weight: bold;
+    }
+
+    .buttonBDR {
+        display: none;
+    }
+
+    .buttonIC {
+        height: 100%;
+        max-width: 45px;
+        font-size: 14px;
+        color: white;
+        flex-grow: 2;
+        background-color: #0065FC;
+        border: 0px;
+        border-radius: 15px 15px 15px 15px;
+        /* margin-left:-25px; => Alternative au position:absolute */
+        position: relative;
+        right: 10px;
+    }
+
+    .buttonIC:hover {
+        background-color: #0058dd;
+    }
+
+    .buttonIC:active {
+        box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
+    }
+
+    /* _____________________ DEBUT FILTRES _____________________ */
+
+    .divfilter {
+        display: flex;
+        flex-flow: row wrap;
+        justify-items: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .hfilter {
+        margin-right: 25px;
+    }
+
+    .listbtnfilter {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5px 20px 5px 0px;
+        padding: 0px;
+    }
+
+    .icnfilter {
+        color: #0065FC;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .btnfilter {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        border: 3px solid #dadada;
+        margin: 5px 20px 5px 0px;
+        height: 55px;
+        padding: 0px 10px 0px 5px;
+        border-radius: 25px 25px 25px 25px;
+        font-variation-settings: 'wght'700;
+    }
+
+    .bordericn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        margin: 0px 0px 0px 0px;
+        background-color: #DEEBFF;
+        border: 3px solid #DEEBFF;
+        border-radius: 25px 25px 25px 25px;
+        position: relative;
+        right: 10px;
+        z-index: 2;
+
+    }
+}
