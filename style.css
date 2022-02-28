@@ -143,14 +143,15 @@ nav {
 }
 
 .dot {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .saisieBDR {
-    width: 350px;
+    width: 250px;
     height: 100%;
     border: 1px solid #F2F2F2;
     padding-left: 10px;
+    padding-right: 15px;
     font-weight: bold;
     font-size: large;
     outline: none;
@@ -166,9 +167,9 @@ input::placeholder {
 }
 
 .buttonBDR {
-    width: 100px;
+    width: 125px;
     height: 100%;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     border: 1px solid #0065FC;
@@ -190,6 +191,7 @@ input::placeholder {
 /* _____________________ DEBUT FILTRES _____________________ */
 
 .divfilter {
+    /* j'ai arrêté de comparer ici au 27/02 */
     /* div des filtres */
     display: flex;
     flex-flow: row wrap;
@@ -222,9 +224,9 @@ input::placeholder {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    border: 3px solid #dadada;
+    border: 2px solid #dadada;
     margin: 5px 20px 5px 0px;
-    height: 55px;
+    height: 50px;
     padding: 0px 20px 0px 5px;
     border-radius: 25px 25px 25px 25px;
     font-variation-settings: 'wght'700;
@@ -235,8 +237,8 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     margin: 0px 0px 0px 0px;
     background-color: #DEEBFF;
     border: 3px solid #DEEBFF;
@@ -246,14 +248,56 @@ input::placeholder {
     z-index: 2;
 }
 
+.resultfilter {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.infoicn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    border: 2px solid #dbdbdb9f;
+    border-radius: 25px 25px 25px 25px;
+}
+
 /* _____________________ FIN - FILTRES _____________________ */
+.icni {
+    color: #0065FC;
+    font-size: 13px;
+}
+
+.pinfo {
+    margin: 0 0 0 10px;
+}
+
 main {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     order: 2;
     flex-flow: row wrap;
     width: 100%;
     max-height: 90%;
+}
+
+#Hébergements {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.headerheb {
+    width: 100%;
+}
+
+.all_articles img {
+    width: 200px;
+    height: 100px;
 }
 
 footer {
@@ -273,7 +317,7 @@ footer {
     }
 
     .bodyv {
-        margin-left: 2%;
+        margin-left: 0px;
     }
 
     .header1 {
@@ -304,50 +348,22 @@ footer {
         margin: 5px 0px 3px 10px;
     }
 
+    .p1 {
+        margin: 0 0 0 10px;
+    }
+
     .divBDR {
+        margin: 20px 0px 0px 10px;
+    }
+
+    .formBDR {
         margin-right: 10px;
-        height: 40px;
-    }
-
-    /* .formBDR {
-        width: 100%;
-    } à voir si le bouton search dépasse toujours à droite*/
-
-
-    /* fin comparaison media et normal (25/02 23h20) */
-    .labelBDR {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #F2F2F2;
-        height: 100%;
-        border: 1px solid #F2F2F2;
-        border-radius: 15px 0px 0px 15px;
-        padding: 12px;
-        flex-grow: 2;
-        max-width: 45px;
-    }
-
-    .dot {
-        font-size: 15px;
+        /* Pour pas que la loupe colle sur la droite */
     }
 
     .saisieBDR {
-        height: 100%;
         flex-grow: 1;
-        border: 1px solid #F2F2F2;
-        padding-left: 10px;
-        font-weight: bold;
-        flex-grow: 1;
-        outline: none;
-        /* Sert à retirer la bordure par défaut quand on clique sur la zone de saisie */
-        padding-right: 20px;
-    }
-
-    input::placeholder {
-        opacity: 100%;
-        color: black;
-        font-weight: bold;
+        /* La barre de saisie s'étend sur toute la largeur du bloc parent */
     }
 
     .buttonBDR {
@@ -377,57 +393,21 @@ footer {
     }
 
     /* _____________________ DEBUT FILTRES _____________________ */
-
     .divfilter {
-        display: flex;
-        flex-flow: row wrap;
-        justify-items: center;
-        align-items: center;
         margin-left: 10px;
     }
 
-    .hfilter {
-        margin-right: 25px;
-    }
-
     .listbtnfilter {
-        display: flex;
-        flex-flow: row wrap;
         margin: 5px 20px 5px 0px;
-        padding: 0px;
+
     }
 
-    .icnfilter {
-        color: #0065FC;
-        padding: 5px;
-        font-size: 20px;
-    }
-
-    .btnfilter {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        border: 3px solid #dadada;
-        margin: 5px 20px 5px 0px;
-        height: 55px;
-        padding: 0px 10px 0px 5px;
-        border-radius: 25px 25px 25px 25px;
-        font-variation-settings: 'wght'700;
-    }
-
-    .bordericn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 55px;
-        height: 55px;
-        margin: 0px 0px 0px 0px;
-        background-color: #DEEBFF;
-        border: 3px solid #DEEBFF;
-        border-radius: 25px 25px 25px 25px;
-        position: relative;
-        right: 10px;
-        z-index: 2;
-
+    .resultfilter {
+        margin-left: 10px;
     }
 }
+
+
+
+
++
