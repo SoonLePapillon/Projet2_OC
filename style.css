@@ -11,6 +11,7 @@
 
 body {
     margin-top: 0px;
+    /* display: flex; */
 }
 
 ul {
@@ -277,35 +278,218 @@ input::placeholder {
     margin: 0 0 0 10px;
 }
 
+/* _____________________ FIN - HEADER  _____________________ */
+
 main {
     display: flex;
     flex-flow: row wrap;
-    order: 2;
-    flex-flow: row wrap;
     width: 100%;
-    max-height: 90%;
+    height: auto;
+    margin: 0px;
+    order: 2;
+}
+
+#section_et_aside {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 0px;
 }
 
 #Hébergements {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 66%;
+    height: auto;
+    background-color: #F2F2F2;
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    margin: 0px 20px 0px 0px;
 }
 
 .headerheb {
     width: 100%;
+    height: 5%;
+    padding: 0px;
 }
 
-.all_articles img {
-    width: 200px;
+.titresection1 {
+    font-size: 20px;
+    font-variation-settings: 'wght'500;
+    margin: 0px;
+    padding: 0px;
+}
+
+#all_articles_heb {
+    /* div */
+    display: flex;
+    flex-flow: row wrap;
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.articles_heb {
+    /* chaque article */
+    display: flex;
+    flex-flow: column wrap;
+    width: 33%;
+    height: 50%;
+    margin: 0px 10px 25px 20px;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+.articles_heb img {
+    width: 100%;
+    height: 55%;
+    margin: 0px 0px 5px 0px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.titrearticleheb {
+    width: 100%;
+    font-size: 15px;
+    font-variation-settings: 'wght'550;
+    margin: 0px 0px 5px 5px;
+}
+
+.particle {
+    width: 100%;
+    font-size: 14px;
+    font-variation-settings: 'wght'450;
+    margin: 0px 0px 5px 5px;
+}
+
+.lowprice {
+    font-variation-settings: 'wght'650;
+}
+
+.€ {
+    font-variation-settings: 'wght'650;
+}
+
+.note_star {
+    width: 100%;
+    font-size: 14px;
+    margin: 0px 0px 5px 5px;
+}
+
+.star {
+    color: #0065FC;
+}
+
+.vide {
+    color: #d8d8d8;
+}
+
+.footerheb {
+    width: 100%;
+    height: 5%;
+}
+
+/* _______________________ */
+
+#Populaires {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    background-color: #F2F2F2;
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    margin: 0px;
+}
+
+.headerpop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+}
+
+.titreaside {
+    font-size: 20px;
+    font-variation-settings: 'wght'500;
+    margin: 0px 10px 0 0;
+    padding: 0px;
+}
+
+#all_articles_pop {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.articles_pop {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
     height: 100px;
+    margin: 0px 10px 25px 20px;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 20px 20px 20px 20px;
 }
 
-footer {
+.titrearticlepop {
+    font-size: 20px;
+    font-variation-settings: 'wght'500;
+    margin: 0px;
+    padding: 0px;
+}
+
+aside img {
+    width: 100px;
+    height: 110px;
+    margin: 0px 5px 0px 0px;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+
+}
+
+
+
+
+
+/* _______________________ */
+.article_activités img {
+    width: 200px;
+    height: 200px;
+}
+
+/* _______________________ */
+
+.footeract {
     background-color: rgb(185, 185, 212);
     display: flex;
-    order: 3;
     width: 100%;
     height: auto;
+}
+
+
+/* _______________________ */
+
+#footer {
+    order: 3;
 }
 
 /*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
@@ -406,8 +590,3 @@ footer {
         margin-left: 10px;
     }
 }
-
-
-
-
-+
