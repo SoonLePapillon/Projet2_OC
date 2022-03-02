@@ -10,8 +10,8 @@
 }
 
 body {
-    margin-top: 0px;
-    /* display: flex; */
+    margin: 0px;
+    width: 100%;
 }
 
 ul {
@@ -23,20 +23,14 @@ a {
     text-decoration: none;
 }
 
-@media screen and (min-width:768px) {
-    .buttonIC {
-        display: none;
-    }
-}
-
 /* _____________________ DEBUT HEADER _____________________ */
-.bodyv {
+.bodiv {
     font-family: Raleway;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
-    margin: 0 5% 0 5%;
+    padding: 0 15% 0 15%;
 }
 
 .header1 {
@@ -72,30 +66,47 @@ nav {
 
 .listenav {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
 .lienpuce {
-    max-width: 50%;
-    padding: 40px 0px 30px 0px;
-    flex-grow: 1;
-    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    /* max-width: 50%;
+    flex-grow: 1; */
+    width: 200px;
+    height: 70px;
+    margin: 0px 0px 0px 0px;
+
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .lienpuce1 {
-    color: #0065FC;
     border-top: 3px solid #0065FC;
+}
+
+.lienpuce1 a {
+    color: #0065FC;
 }
 
 .lienpuce:hover {
     color: #0065FC;
     border-top: 3px solid #0065FC;
 }
+
+
 
 /* _____________________ FIN HEADER _____________________ */
 /* _____________________ DEBUT HEADER MAIN_____________________ */
@@ -228,9 +239,13 @@ input::placeholder {
     border: 2px solid #dadada;
     margin: 5px 20px 5px 0px;
     height: 50px;
-    padding: 0px 20px 0px 5px;
-    border-radius: 25px 25px 25px 25px;
+    padding: 0px 20px 0px 0px;
+    border-radius: 25px;
     font-variation-settings: 'wght'700;
+    border-left: none;
+    /* enlève la bordure à gauche pour pas que ça fasse moche avec la bordure de l'icone */
+    gap: 5px;
+    /* espace entre l'icone et le texte */
 
 }
 
@@ -240,13 +255,13 @@ input::placeholder {
     align-items: center;
     width: 50px;
     height: 50px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
     background-color: #DEEBFF;
     border: 3px solid #DEEBFF;
-    border-radius: 25px 25px 25px 25px;
-    position: relative;
-    right: 10px;
-    z-index: 2;
+    border-radius: 25px;
+    padding-left: 0px;
+    /* position: relative; */
+    /* right: 10px; <= j'avais fait ça avant pour placer mes bordures de l'icone au-dessus de la bordure du champ de saisie */
 }
 
 .resultfilter {
@@ -291,36 +306,36 @@ main {
 
 #section_et_aside {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     width: 100%;
     height: auto;
     padding: 0px;
+    gap: 20px;
 }
 
 #Hébergements {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-    width: 66%;
-    height: auto;
+    align-items: center;
+    max-width: 900px;
     background-color: #F2F2F2;
     border-radius: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
-    margin: 0px 20px 0px 0px;
+    padding: 30px 30px 30px 30px;
+    gap: 20px;
 }
 
 .headerheb {
     width: 100%;
-    height: 5%;
+    height: auto;
     padding: 0px;
 }
 
 .titresection1 {
     font-size: 20px;
     font-variation-settings: 'wght'500;
-    margin: 0px;
+    margin: 0 0 0 10px;
+    /* pour aligner avec les cartes */
     padding: 0px;
 }
 
@@ -328,31 +343,32 @@ main {
     /* div */
     display: flex;
     flex-flow: row wrap;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80%;
     padding: 0px;
     margin: 0px;
-
+    gap: 20px
 }
 
 .articles_heb {
-    /* chaque article */
+    /* chaque carte */
     display: flex;
     flex-flow: column wrap;
-    width: 33%;
-    height: 50%;
-    margin: 0px 10px 25px 20px;
+    width: 245px;
+    /* height: 200px; */
     background-color: white;
-    border: 3px solid white;
-    border-radius: 20px 20px 20px 20px;
+    border: 4px solid white;
+    border-radius: 25px;
+}
 
+.img_heb {
+    display: flex;
+    width: 100%;
 }
 
 .articles_heb img {
     width: 100%;
-    height: 55%;
+    height: 115px;
     margin: 0px 0px 5px 0px;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
@@ -399,29 +415,36 @@ main {
     height: 5%;
 }
 
+.titrefooter {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    margin: 0 0 0 10px;
+    /* pour aligner avec les cartes */
+    font-variation-settings: 'wght'500;
+}
+
 /* _______________________ */
 
 #Populaires {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 33%;
-    height: 100%;
+    max-width: 400px;
     background-color: #F2F2F2;
-    border-radius: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    padding: 30px 20px 30px 20px;
     margin: 0px;
+    gap: 20px;
 }
 
 .headerpop {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     width: 100%;
-    height: 10%;
-    margin: 0px 0px 15px 0px;
+    height: auto;
     padding: 0px;
 }
 
@@ -433,42 +456,68 @@ main {
 }
 
 #all_articles_pop {
+    /* div */
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: space-between;
     width: 100%;
     height: 100%;
+    gap: 15px;
 }
 
 .articles_pop {
+    /* chaque carte */
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 100px;
-    margin: 0px 10px 25px 20px;
+    width: 325px;
+    height: 140px;
     background-color: white;
     border: 3px solid white;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
+    gap: 10px;
 }
 
-.titrearticlepop {
-    font-size: 20px;
-    font-variation-settings: 'wght'500;
+
+.img_pop img {
+    width: 110px;
+    height: 100%;
     margin: 0px;
-    padding: 0px;
-}
-
-aside img {
-    width: 100px;
-    height: 110px;
-    margin: 0px 5px 0px 0px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
+}
+
+.img_pop {
+    display: flex;
+    width: 110px;
+    height: 100%;
+}
+
+.titre_article_pop {
+    width: 100%;
+    font-size: 15px;
+    font-variation-settings: 'wght'550;
+    margin: 0px;
+}
+
+.description_article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.note_star {
+    display: flex;
+    justify-self: flex-end;
+    width: 100%;
+    font-size: 14px;
+    margin: 0px 0px 5px 5px;
 
 }
 
-
-
-
+.note_star_pop {
+    margin-top: auto;
+}
 
 /* _______________________ */
 .article_activités img {
@@ -493,7 +542,17 @@ aside img {
 }
 
 /*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
+
 @media screen and (max-width:992px) {}
+
+
+@media screen and (min-width:768px) {
+    .buttonIC {
+        display: none;
+    }
+
+    /* j'aurais pu faire un visibility : hidden */
+}
 
 @media screen and (max-width:768px) {
     body {
@@ -524,6 +583,8 @@ aside img {
         border-bottom: 3px solid #0065FC;
         border-top: none;
     }
+
+
 
     /* _____________________ FIN HEADER _____________________ */
     /* _____________________ DEBUT HEADER MAIN_____________________ */
