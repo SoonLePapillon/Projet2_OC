@@ -23,6 +23,8 @@ a {
 }
 
 /* _____________________ DEBUT HEADER _____________________ */
+/* _____________________ DEBUT HEADER _____________________ */
+
 .bodiv {
     font-family: Raleway;
     display: flex;
@@ -105,10 +107,21 @@ nav a {
     border-top: 3px solid #0065FC;
 }
 
-
-
 /* _____________________ FIN HEADER _____________________ */
-/* _____________________ DEBUT HEADER MAIN_____________________ */
+/* _____________________ FIN HEADER _____________________ */
+
+/* _____________________ DEBUT MAIN_____________________ */
+/* _____________________ DEBUT MAIN_____________________ */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    order: 2;
+}
+
+/* _____________________ DEBUT BARRE DE RECHERCHE _____________________ */
 
 .h2_1 {
     margin: 5px 0px 3px 0px;
@@ -185,13 +198,11 @@ input::placeholder {
     box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
 }
 
-/* _____________________ FIN HEADER MAIN _____________________ */
-/* _____________________ DEBUT BODY MAIN _____________________ */
+/* _____________________ FIN BARRE DE RECHERCHE _____________________ */
 
 /* _____________________ DEBUT FILTRES _____________________ */
 
 .divfilter {
-    /* j'ai arrêté de comparer ici au 27/02 */
     /* div des filtres */
     display: flex;
     flex-flow: row wrap;
@@ -281,16 +292,9 @@ input::placeholder {
     margin: 0 0 0 10px;
 }
 
-/* _____________________ FIN - HEADER  _____________________ */
+/* _____________________ FIN - HEADER MAIN _____________________ */
 
-main {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    order: 2;
-}
+/* _____________________ DEBUT SECTION + ASIDE  _____________________ */
 
 #section_et_aside {
     display: flex;
@@ -414,7 +418,7 @@ main {
     font-variation-settings: 'wght'500;
 }
 
-/* _______________________ */
+/*_______________________ DEBUT - ASIDE _______________________*/
 
 #Populaires {
     display: flex;
@@ -502,23 +506,58 @@ main {
     margin-top: auto;
 }
 
-/* _______________________ */
-.article_activités img {
-    width: 200px;
-    height: 200px;
-}
+/*_______________________ FIN - ASIDE _______________________*/
 
-/* _______________________ */
+/* _____________________ FIN SECTION + ASIDE  _____________________ */
 
-.footeract {
-    background-color: rgb(185, 185, 212);
+/* _____________________ DEBUT ACTIVITÉ_____________________ */
+
+#Activités {
     display: flex;
+    flex-flow: column nowrap;
     width: 100%;
-    height: auto;
+    height: 800px;
+    border: 5px red solid;
 }
 
+.titre_activités {
+    width: 100%;
+    border: 3px blue solid;
+}
 
-/* _______________________ */
+.all_marseille_activities {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: space-around;
+    width: auto;
+    height: 100%;
+    border: 3px solid green;
+}
+
+.colonne {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+}
+
+.photo {
+    width: 100%;
+}
+
+.colonne1 img, .colonne3 img {
+    height: 300px;
+    width: 100px;
+}
+
+.colonne2 img, .colonne4 img {
+    height: 300px;
+    width: 100px;
+}
+
+/* _____________________ DEBUT FOOTER _____________________ */
+/* _____________________ DEBUT FOOTER _____________________ */
 
 #footer {
     order: 3;
