@@ -28,7 +28,8 @@ a {
 .bodiv {
     font-family: Raleway;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-flow: column nowrap;
     height: 100%;
     width: auto;
     padding: 0 15% 0 15%;
@@ -112,6 +113,7 @@ nav a {
 
 /* _____________________ DEBUT MAIN_____________________ */
 /* _____________________ DEBUT MAIN_____________________ */
+
 main {
     display: flex;
     flex-flow: row wrap;
@@ -306,10 +308,6 @@ input::placeholder {
 }
 
 #Hébergements {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center; */
     width: auto;
     background-color: #F2F2F2;
     border-radius: 20px 20px 20px 20px;
@@ -335,7 +333,7 @@ input::placeholder {
     margin: 20px 0;
 }
 
-.articles_heb {
+.article_heb {
     /* chaque carte */
     display: flex;
     flex-flow: column nowrap;
@@ -350,7 +348,7 @@ input::placeholder {
     width: 100%;
 }
 
-.articles_heb img {
+.article_heb img {
     width: 100%;
     height: 115px;
     margin: 0px 0px 5px 0px;
@@ -516,44 +514,98 @@ input::placeholder {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    height: 800px;
-    border: 5px red solid;
+    height: 410px;
 }
 
-.titre_activités {
-    width: 100%;
-    border: 3px blue solid;
-}
-
-.all_marseille_activities {
+.titre_act {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: space-around;
-    width: auto;
+    width: 100%;
+    font-size: 20px;
+    font-variation-settings: 'wght'500;
+    margin: 0px;
+    padding: 0px;
+}
+
+.all_marseille_act {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    width: 100%;
     height: 100%;
     border: 3px solid green;
+    gap: 30px;
+    align-content: 0px;
 }
 
-.colonne {
+.article_act {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 300px;
+    flex-flow: column nowrap;
+    width: 275px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
+    margin: 0px;
 }
 
-.photo {
+.img_act {
+    display: flex;
     width: 100%;
 }
 
-.colonne1 img, .colonne3 img {
-    height: 300px;
-    width: 100px;
+.article_act img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
 }
 
-.colonne2 img, .colonne4 img {
-    height: 300px;
-    width: 100px;
+.article_act .img_act {
+    display: flex;
+    width: 100%;
+}
+
+#Activités img {
+    object-fit: cover;
+}
+
+.photo1 img {
+    height: 100%;
+}
+
+.article1, .article4 {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.photo1, .photo4 {
+    height: 340px;
+}
+
+.article2 {
+    height: 220px;
+}
+
+.photo2 {
+    height: 170px;
+}
+
+.article3 {
+    height: 150px;
+}
+
+.photo3 {
+    height: 100px;
+}
+
+.article_act img {
+    width: 100%;
+}
+
+.titre_article_act {
+    width: 100%;
+    font-size: 17px;
+    font-variation-settings: 'wght'550;
+    margin: 15px 0 15px 20px;
 }
 
 /* _____________________ DEBUT FOOTER _____________________ */
