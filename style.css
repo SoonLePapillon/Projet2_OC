@@ -25,17 +25,16 @@ a {
 /* _____________________ DEBUT HEADER _____________________ */
 /* _____________________ DEBUT HEADER _____________________ */
 
-.bodiv {
+#bodiv {
     font-family: Raleway;
     display: flex;
     /* flex-wrap: wrap; */
     flex-flow: column nowrap;
     height: 100%;
-    width: auto;
-    padding: 0 15% 0 15%;
+    padding: 0 18% 0 18%;
 }
 
-.header {
+#header {
     display: flex;
     flex-flow: row nowrap;
     height: auto;
@@ -118,9 +117,10 @@ main {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0px;
     order: 2;
+    gap: 30px;
 }
 
 /* _____________________ DEBUT BARRE DE RECHERCHE _____________________ */
@@ -269,7 +269,7 @@ input::placeholder {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
 }
 
 .infoicn {
@@ -426,6 +426,7 @@ input::placeholder {
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 30px 20px 30px 20px;
+    width: 100%;
     margin: 0px;
     gap: 20px;
 }
@@ -452,14 +453,12 @@ input::placeholder {
     flex-flow: column;
     justify-content: space-between;
     align-items: space-between;
-    width: 100%;
     height: 100%;
 }
 
 .articles_pop {
     /* chaque carte */
     display: flex;
-    width: 100%;
     height: 140px;
     background-color: white;
     border: 3px solid white;
@@ -508,18 +507,18 @@ input::placeholder {
 
 /* _____________________ FIN SECTION + ASIDE  _____________________ */
 
-/* _____________________ DEBUT ACTIVITÉ_____________________ */
+/* _____________________ DEBUT ACTIVITÉS_____________________ */
 
 #Activités {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    height: 410px;
+    height: auto;
+    gap: 20px;
+    /*pour séparer le titre des cards */
 }
 
 .titre_act {
-    display: flex;
-    width: 100%;
     font-size: 20px;
     font-variation-settings: 'wght'500;
     margin: 0px;
@@ -527,27 +526,27 @@ input::placeholder {
 }
 
 .all_marseille_act {
+    /* bloc parent de toutes les cards */
     display: flex;
     flex-flow: column wrap;
-    align-items: flex-start;
+    align-items: space-between;
     width: 100%;
-    height: 100%;
-    border: 3px solid green;
+    height: 410px;
     gap: 30px;
-    align-content: 0px;
 }
 
 .article_act {
+    /* chaque carte */
     display: flex;
     flex-flow: column nowrap;
-    width: 275px;
+    width: 23%;
     background-color: white;
     border-radius: 25px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
     margin: 0px;
 }
 
-.img_act {
+.article_act .img_act {
     display: flex;
     width: 100%;
 }
@@ -558,27 +557,20 @@ input::placeholder {
     border-radius: 20px 20px 0px 0px;
 }
 
-.article_act .img_act {
-    display: flex;
-    width: 100%;
+.titre_article_act {
+    font-size: 17px;
+    font-variation-settings: 'wght'550;
+    margin: 15px 0 15px 20px;
 }
 
-#Activités img {
-    object-fit: cover;
-}
-
-.photo1 img {
-    height: 100%;
-}
+/* Hauteur des cards et des images */
 
 .article1, .article4 {
-    display: flex;
-    flex-direction: column;
     height: 400px;
 }
 
 .photo1, .photo4 {
-    height: 340px;
+    height: 350px;
 }
 
 .article2 {
@@ -597,21 +589,30 @@ input::placeholder {
     height: 100px;
 }
 
-.article_act img {
-    width: 100%;
+.article5 {
+    height: 180px;
 }
 
-.titre_article_act {
-    width: 100%;
-    font-size: 17px;
-    font-variation-settings: 'wght'550;
-    margin: 15px 0 15px 20px;
+.photo5 {
+    height: 130px;
 }
+
+.article6 {
+    height: 190px;
+}
+
+.photo6 {
+    height: 140px;
+}
+
 
 /* _____________________ DEBUT FOOTER _____________________ */
 /* _____________________ DEBUT FOOTER _____________________ */
 
 #footer {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
     order: 3;
 }
 
@@ -625,7 +626,7 @@ input::placeholder {
         display: none;
     }
 
-    /* j'aurais pu faire un visibility : hidden */
+    /* j'aurais pu faire un visibility : hidden (s'affiche tjrs dans le HTML et dans le CSS, ses dimensions sont toujours là du coup gênant) ou un display_none (alors que oui non) */
 }
 
 @media screen and (max-width:768px) {
