@@ -10,7 +10,10 @@
 }
 
 body {
+    display: flex;
     margin: 0px;
+    justify-content: center;
+    padding: 0 18%;
 }
 
 ul {
@@ -28,10 +31,9 @@ a {
 #bodiv {
     font-family: Raleway;
     display: flex;
-    /* flex-wrap: wrap; */
     flex-flow: column nowrap;
     height: 100%;
-    padding: 0 18% 0 18%;
+    margin: auto;
 }
 
 #header {
@@ -247,7 +249,12 @@ input::placeholder {
     /* enlève la bordure à gauche pour pas que ça fasse moche avec la bordure de l'icone */
     gap: 5px;
     /* espace entre l'icone et le texte */
+}
 
+.btnfilter:hover {
+    color: white;
+    background-color: #0065FC;
+    transform: rotate(1.05)
 }
 
 .bordericn {
@@ -307,14 +314,24 @@ input::placeholder {
     gap: 20px;
 }
 
+#section_et_aside .article_heb:hover {
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
+
+#section_et_aside .article_pop:hover {
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
+
 #Hébergements {
-    width: auto;
+    /* width: auto; */
+    width: 70;
     background-color: #F2F2F2;
     border-radius: 20px 20px 20px 20px;
     padding: 30px 30px 0px 30px;
     gap: 20px;
 }
-
 
 .titre_heb {
     display: flex;
@@ -341,6 +358,8 @@ input::placeholder {
     background-color: white;
     border: 5px solid white;
     border-radius: 25px;
+    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
+    transition-duration: 100ms;
 }
 
 .img_heb {
@@ -435,6 +454,7 @@ input::placeholder {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: auto;
     padding: 0px;
@@ -447,7 +467,7 @@ input::placeholder {
     padding: 0px;
 }
 
-#all_articles_pop {
+#all_cards_pop {
     /* div */
     display: flex;
     flex-flow: column;
@@ -456,14 +476,16 @@ input::placeholder {
     height: 100%;
 }
 
-.articles_pop {
+.article_pop {
     /* chaque carte */
     display: flex;
     height: 140px;
     background-color: white;
-    border: 3px solid white;
+    border: 5px solid white;
     border-radius: 20px;
     gap: 10px;
+    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
+    transition-duration: 100ms;
 }
 
 
@@ -493,6 +515,7 @@ input::placeholder {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    min-width: 150px;
     margin: 15px 0 10px 15px;
 }
 
@@ -514,7 +537,7 @@ input::placeholder {
     flex-flow: column nowrap;
     width: 100%;
     height: auto;
-    gap: 20px;
+    /* gap: 20px; */
     /*pour séparer le titre des cards */
 }
 
@@ -525,11 +548,12 @@ input::placeholder {
     padding: 0px;
 }
 
-.all_marseille_act {
+.all_cards_act {
     /* bloc parent de toutes les cards */
     display: flex;
     flex-flow: column wrap;
-    align-items: space-between;
+    justify-content: center;
+    align-content: space-between;
     width: 100%;
     height: 410px;
     gap: 30px;
@@ -544,6 +568,8 @@ input::placeholder {
     border-radius: 25px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
     margin: 0px;
+    transition-duration: 100ms;
+    /* permet la transition "retour" quand j'enlève mon curseur */
 }
 
 .article_act .img_act {
@@ -605,6 +631,10 @@ input::placeholder {
     height: 140px;
 }
 
+#Activités .article_act:hover {
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
 
 /* _____________________ DEBUT FOOTER _____________________ */
 /* _____________________ DEBUT FOOTER _____________________ */
@@ -612,11 +642,100 @@ input::placeholder {
 #footer {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
     width: 100%;
+    /* padding-left: 10%; */
+    background-color: #F2F2F2;
     order: 3;
+    margin-top: 50px;
+}
+
+.content_footer {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 83%;
+    gap: 150px;
+}
+
+#footer h3 {
+    font-variation-settings: 'wght'500;
+}
+
+#footer p {
+    font-variation-settings: 'wght'450;
+}
+
+#footer p:hover {
+    color: #6a71b3;
 }
 
 /*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
+
+@media screen and (max-width:1220px) {
+
+    body {
+        padding: 0 5px;
+    }
+
+    #section_et_aside {
+        flex-direction: column-reverse;
+    }
+
+    #Hébergements {
+        width: auto;
+        background-color: #F2F2F2;
+        border-radius: 20px 20px 20px 20px;
+        padding: 30px 30px 0px 30px;
+        gap: 20px;
+    }
+
+    .All_cards {
+        justify-content: space-between;
+    }
+
+    .article_heb {
+        /* chaque carte */
+        width: 100%;
+    }
+
+    #all_cards_pop {
+        /* div */
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: space-between;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .article_pop {
+        /* chaque carte */
+        width: 33%;
+    }
+
+    .all_cards_act {
+        flex-flow: row wrap;
+        height: auto;
+        justify-content: space-between;
+        column-gap: unset;
+        /* empêche les éléments d'aller à la ligne avec la valeur 48.5% en width */
+        row-gap: 30px;
+    }
+
+    .article_act {
+        width: 48.5%;
+        height: 200px;
+    }
+
+    article .img_act {
+        width: 100%;
+        height: 150px;
+    }
+
+    #footer {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
 
 @media screen and (max-width:992px) {}
 
@@ -632,10 +751,6 @@ input::placeholder {
 @media screen and (max-width:768px) {
     body {
         margin: 0px;
-    }
-
-    .bodyv {
-        margin-left: 0px;
     }
 
     .header {
