@@ -477,7 +477,7 @@ input::placeholder {
     background-color: white;
     border: 5px solid white;
     padding-right: 1%;
-    border-radius: 20px;
+    border-radius: 25px;
     gap: 10px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
     transition-duration: 100ms;
@@ -532,7 +532,7 @@ input::placeholder {
     flex-flow: column nowrap;
     width: 100%;
     height: auto;
-    /* gap: 20px; */
+    gap: 20px;
     /*pour séparer le titre des cards */
 }
 
@@ -634,7 +634,7 @@ input::placeholder {
 /* _____________________ DEBUT FOOTER _____________________ */
 /* _____________________ DEBUT FOOTER _____________________ */
 
-#footer {
+footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -652,15 +652,15 @@ input::placeholder {
     gap: 150px;
 }
 
-#footer h3 {
+footer h3 {
     font-variation-settings: 'wght'500;
 }
 
-#footer p {
+footer p {
     font-variation-settings: 'wght'450;
 }
 
-#footer p:hover {
+footer p:hover {
     color: #6a71b3;
 }
 
@@ -669,7 +669,7 @@ input::placeholder {
 @media screen and (max-width:1465px) {
 
     /* juste pour le footer */
-    #footer {
+    footer {
         width: 100%;
         margin-left: 0px;
     }
@@ -727,9 +727,21 @@ input::placeholder {
         height: 150px;
     }
 
-    #footer {
+    footer {
         width: 100%;
         margin-left: 0px;
+    }
+
+    #section_et_aside .article_heb:hover {
+        transform: scale(1.025);
+    }
+
+    #section_et_aside .article_pop:hover {
+        transform: scale(1.025);
+    }
+
+    #Activités .article_act:hover {
+        transform: scale(1.025);
     }
 }
 
@@ -791,70 +803,104 @@ input::placeholder {
         border-top: none;
     }
 
-
-
-    /* _____________________ FIN HEADER _____________________ */
-    /* _____________________ DEBUT HEADER MAIN_____________________ */
-
-    .h2_1 {
-        margin: 5px 0px 3px 10px;
+    .ligne_un, .ligne_deux {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0;
     }
 
-    .p1 {
-        margin: 0 0 0 10px;
+    .article_heb {
+        /* chaque carte */
+        width: 100%;
     }
 
-    .divBDR {
-        margin: 20px 0px 0px 10px;
+    #Activités {
+        padding: 0 2%;
     }
 
-    .formBDR {
-        margin-right: 10px;
-        /* Pour pas que la loupe colle sur la droite */
+    .all_cards_act {
+        /* bloc parent de toutes les cards */
+        flex-flow: column nowrap;
+        align-items: center;
     }
 
-    .saisieBDR {
-        flex-grow: 1;
-        /* La barre de saisie s'étend sur toute la largeur du bloc parent */
+    .article_act {
+        /* chaque carte */
+        width: 98%;
     }
 
-    .buttonBDR {
-        display: none;
+    .content_footer {
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+        gap: 15px;
     }
+}
 
-    .buttonIC {
-        height: 100%;
-        max-width: 45px;
-        font-size: 14px;
-        color: white;
-        flex-grow: 2;
-        background-color: #0065FC;
-        border: 0px;
-        border-radius: 15px 15px 15px 15px;
-        /* margin-left:-25px; => Alternative au position:absolute */
-        position: relative;
-        right: 10px;
-    }
 
-    .buttonIC:hover {
-        background-color: #0058dd;
-    }
+/* _____________________ FIN HEADER _____________________ */
+/* _____________________ DEBUT HEADER MAIN_____________________ */
 
-    .buttonIC:active {
-        box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
-    }
+.h2_1 {
+    margin: 5px 0px 3px 10px;
+}
 
-    /* _____________________ DEBUT FILTRES _____________________ */
-    .divfilter {
-        margin-left: 10px;
-    }
+.p1 {
+    margin: 0 0 0 10px;
+}
 
-    .listbtnfilter {
-        margin: 5px 20px 5px 0px;
+.divBDR {
+    margin: 20px 0px 0px 10px;
+}
 
-    }
+.formBDR {
+    margin-right: 10px;
+    /* Pour pas que la loupe colle sur la droite */
+}
 
-    .resultfilter {
-        margin-left: 10px;
-    }
+.saisieBDR {
+    flex-grow: 1;
+    /* La barre de saisie s'étend sur toute la largeur du bloc parent */
+}
+
+.buttonBDR {
+    display: none;
+}
+
+.buttonIC {
+    height: 100%;
+    max-width: 45px;
+    font-size: 14px;
+    color: white;
+    flex-grow: 2;
+    background-color: #0065FC;
+    border: 0px;
+    border-radius: 15px 15px 15px 15px;
+    /* margin-left:-25px; => Alternative au position:absolute */
+    position: relative;
+    right: 10px;
+}
+
+.buttonIC:hover {
+    background-color: #0058dd;
+}
+
+.buttonIC:active {
+    box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
+}
+
+/* _____________________ DEBUT FILTRES _____________________ */
+.divfilter {
+    margin-left: 10px;
+}
+
+.listbtnfilter {
+    margin: 5px 20px 5px 0px;
+
+}
+
+.resultfilter {
+    margin-left: 10px;
 }
