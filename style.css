@@ -11,9 +11,14 @@
 
 body {
     display: flex;
-    margin: 0px;
     justify-content: center;
-    padding: 0 18%;
+    margin-top: 0px;
+}
+
+#bodiv {
+    font-family: Raleway;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 ul {
@@ -23,36 +28,26 @@ ul {
 a {
     color: black;
     text-decoration: none;
+    /* pour enlever le soulignement de base des liens */
 }
 
 /* _____________________ DEBUT HEADER _____________________ */
 /* _____________________ DEBUT HEADER _____________________ */
 
-#bodiv {
-    font-family: Raleway;
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
-    margin: auto;
-}
-
-#header {
+header {
     display: flex;
     flex-flow: row nowrap;
-    height: auto;
     width: 100%;
-    align-items: stretch;
     justify-content: space-between;
-    margin-top: 0px;
     order: 1;
 }
 
 .div_logo {
     display: flex;
-    width: 10%;
-    background-color: white;
     justify-content: center;
     align-items: center;
+    width: 10%;
+    background-color: white;
 }
 
 .logo {
@@ -80,12 +75,9 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* max-width: 50%;
-    flex-grow: 1; */
     width: 200px;
     height: 70px;
-    margin: 0px 0px 0px 0px;
-
+    margin: 0px;
 }
 
 nav a {
@@ -117,12 +109,10 @@ nav a {
 
 main {
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 100%;
+    flex-flow: column nowrap;
     margin: 0px;
-    order: 2;
     gap: 30px;
+    order: 2;
 }
 
 /* _____________________ DEBUT BARRE DE RECHERCHE _____________________ */
@@ -328,6 +318,9 @@ input::placeholder {
     /* width: auto; */
     width: 70;
     background-color: #F2F2F2;
+    column-gap: unset;
+    /* empêche les éléments d'aller à la ligne avec la valeur 48.5% en width */
+    row-gap: 30px;
     border-radius: 20px 20px 20px 20px;
     padding: 30px 30px 0px 30px;
     gap: 20px;
@@ -361,6 +354,7 @@ input::placeholder {
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
     transition-duration: 100ms;
 }
+
 
 .img_heb {
     display: flex;
@@ -450,7 +444,7 @@ input::placeholder {
     gap: 20px;
 }
 
-.headerpop {
+.header_pop {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -482,6 +476,7 @@ input::placeholder {
     height: 140px;
     background-color: white;
     border: 5px solid white;
+    padding-right: 1%;
     border-radius: 20px;
     gap: 10px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
@@ -643,8 +638,8 @@ input::placeholder {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    width: 100%;
-    /* padding-left: 10%; */
+    width: 120%;
+    margin-left: -10%;
     background-color: #F2F2F2;
     order: 3;
     margin-top: 50px;
@@ -671,11 +666,16 @@ input::placeholder {
 
 /*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
 
-@media screen and (max-width:1220px) {
+@media screen and (max-width:1465px) {
 
-    body {
-        padding: 0 5px;
+    /* juste pour le footer */
+    #footer {
+        width: 100%;
+        margin-left: 0px;
     }
+}
+
+@media screen and (max-width:1220px) {
 
     #section_et_aside {
         flex-direction: column-reverse;
@@ -687,10 +687,6 @@ input::placeholder {
         border-radius: 20px 20px 20px 20px;
         padding: 30px 30px 0px 30px;
         gap: 20px;
-    }
-
-    .All_cards {
-        justify-content: space-between;
     }
 
     .article_heb {
@@ -709,7 +705,7 @@ input::placeholder {
 
     .article_pop {
         /* chaque carte */
-        width: 33%;
+        width: 30%;
     }
 
     .all_cards_act {
@@ -737,7 +733,20 @@ input::placeholder {
     }
 }
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width:992px) {
+    #bodiv {
+        margin: 0px;
+    }
+
+    #all_cards_pop {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .article_pop {
+        width: 100%;
+    }
+}
 
 
 @media screen and (min-width:768px) {
@@ -753,10 +762,18 @@ input::placeholder {
         margin: 0px;
     }
 
-    .header {
+    header {
         flex-flow: column nowrap;
         justify-content: center;
         margin: 0px;
+    }
+
+    .lienpuce {
+        width: 50%;
+    }
+
+    .lienpuce1 {
+        width: 50%;
     }
 
     .div_logo {
