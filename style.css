@@ -665,7 +665,6 @@ footer p:hover {
         /* div */
         flex-flow: row nowrap;
         justify-content: space-between;
-        align-items: space-between;
         height: 100%;
         gap: 20px;
     }
