@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 5px;
+    overflow: hidden visible;
 }
 
 #bodiv {
@@ -649,6 +650,17 @@ footer p:hover {
     }
 }
 
+@media all and (max-width:1355px) {
+
+    .logo {
+        margin-left: -10px;
+    }
+
+    .header_main {
+        margin-left: 15px;
+    }
+}
+
 @media all and (max-width:1265px) {
 
 
@@ -800,6 +812,11 @@ footer p:hover {
         border-top: none;
     }
 
+    .lienpuce2 {
+        border-bottom: 3px solid #aab2be4f;
+        border-top: none;
+    }
+
     .lienpuce:hover {
         border-bottom: 3px solid #0065FC;
         border-top: none;
@@ -808,10 +825,6 @@ footer p:hover {
     .div_logo {
         display: flex;
         width: 100%;
-    }
-
-    .header_main {
-        padding-left: 20px;
     }
 
     .divBDR {
