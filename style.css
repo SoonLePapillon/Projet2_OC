@@ -254,7 +254,7 @@ main {
     /* espace entre l'icone et le texte */
 }
 
-.btnfilter:hover {
+.buttonfilter:hover {
     color: white;
     background-color: #0065FC;
 }
