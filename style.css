@@ -13,7 +13,7 @@
 body {
     display: flex;
     justify-content: center;
-    margin-top: 0px;
+    margin: 0 5px;
 }
 
 #bodiv {
@@ -56,17 +56,11 @@ a {
 
 .listenav {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
 .lienpuce {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     width: 200px;
     height: 70px;
     margin: 0px;
@@ -104,32 +98,41 @@ main {
     flex-flow: column nowrap;
     margin: 0px;
     gap: 30px;
-    order: 2;
 }
 
 /* _____________________ DEBUT BARRE DE RECHERCHE _____________________ */
 
-.h2_1 {
-    margin: 5px 0px 3px 0px;
+.header_main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+}
+
+.h1_p {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.h1_page {
+    font-size: 24px;
+    font-variation-settings: 'wght'500;
+    margin: 0;
     background-color: white;
 }
 
-.p1 {
-    margin: 3px 0px 15px 0px;
+.p_page {
+    margin: 0;
 }
 
 .divBDR {
-    display: flex;
-    flex-flow: row nowrap;
     width: 100%;
     height: 45px;
-    margin: 0px 0px 10px 0px;
 }
 
 .formBDR {
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
     height: 100%;
 }
 
@@ -140,7 +143,6 @@ main {
     width: 45px;
     padding: 12px;
     background-color: #F2F2F2;
-    border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -151,8 +153,8 @@ main {
 .saisieBDR {
     width: 250px;
     border: 1px solid #F2F2F2;
-    padding: 0 15px 0 10px;
-    /* Pour ne pas coller l'écriture */
+    padding: 0 15px;
+    /* Pour ne pas coller l'écriture sur les côtés*/
     font-weight: bold;
     font-size: large;
     outline: none;
@@ -160,7 +162,7 @@ main {
 
 }
 
-input::placeholder {
+.saisieBDR::placeholder {
     opacity: 100%;
     color: black;
     font-size: large;
@@ -171,9 +173,9 @@ input::placeholder {
     font-size: 16px;
     font-weight: bold;
     color: white;
+    background-color: #0065FC;
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
-    background-color: #0065FC;
 }
 
 .buttonBDR:hover {
@@ -196,54 +198,28 @@ input::placeholder {
     /* div des filtres */
     display: flex;
     flex-flow: row wrap;
-    justify-items: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    font-variation-settings: 'wght'600;
+    row-gap: 0px;
+    /* entre les lignes */
+    column-gap: 20px;
 }
 
 .hfilter {
-    margin-right: 25px;
+    font-variation-settings: 'wght'500;
 }
 
 .listbtnfilter {
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
+    justify-content: flex-start;
     margin: 0px;
     padding: 0px;
+    gap: 20px;
 }
 
-.icnfilter {
-    color: #0065FC;
-    padding: 5px;
-    font-size: 20px;
-
-}
-
-.btnfilter {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    border: 2px solid #dadada;
-    margin: 5px 20px 5px 0px;
-    height: 50px;
-    padding: 0px 20px 0px 0px;
-    border-radius: 25px;
-    font-variation-settings: 'wght'700;
-    border-left: none;
-    /* enlève la bordure à gauche pour pas que ça fasse moche avec la bordure de l'icone */
-    gap: 5px;
-    /* espace entre l'icone et le texte */
-}
-
-.btnfilter:hover {
-    color: white;
-    background-color: #0065FC;
-    transform: rotate(1.05)
-}
-
-.bordericn {
+.spanicn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,11 +234,36 @@ input::placeholder {
     /* right: 10px; <= j'avais fait ça avant pour placer mes bordures de l'icone au-dessus de la bordure du champ de saisie */
 }
 
+.icnbutton {
+    color: #0065FC;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.buttonfilter {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0px 20px 0px 0px;
+    border-radius: 25px;
+    font-variation-settings: 'wght'700;
+    border: 2px solid #dadada;
+    border-left: none;
+    /* enlève la bordure à gauche pour pas que ça fasse moche avec la bordure de l'icone */
+    gap: 5px;
+    /* espace entre l'icone et le texte */
+}
+
+.btnfilter:hover {
+    color: white;
+    background-color: #0065FC;
+}
+
 .resultfilter {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin: 10px 0px 0px 0px;
+    gap: 10px;
 }
 
 .infoicn {
@@ -272,21 +273,21 @@ input::placeholder {
     min-width: 25px;
     max-width: 25px;
     height: 25px;
-    margin: 0px 0px 0px 0px;
-    background-color: white;
+    margin: 0px;
     border: 2px solid #dbdbdbb7;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px;
 }
 
-/* _____________________ FIN - FILTRES _____________________ */
 .icni {
     color: #0065FC;
     font-size: 13px;
 }
 
 .pinfo {
-    margin: 0 0 0 10px;
+    margin: 0px;
 }
+
+/* _____________________ FIN - FILTRES _____________________ */
 
 /* _____________________ FIN - HEADER MAIN _____________________ */
 
@@ -355,7 +356,7 @@ input::placeholder {
     /* chaque carte */
     display: flex;
     flex-flow: column nowrap;
-    width: 250px;
+    min-width: 250px;
     background-color: white;
     border: 5px solid white;
     border-radius: 25px;
@@ -486,7 +487,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 150px;
+    min-width: 135px;
     margin: 10px;
     gap: 7px;
 }
@@ -615,7 +616,6 @@ footer {
     width: 120%;
     margin-left: -10%;
     background-color: #F2F2F2;
-    order: 3;
 }
 
 .content_footer {
@@ -644,22 +644,16 @@ footer p:hover {
     /* juste pour le footer */
     footer {
         width: 100%;
-        margin-left: 0px;
+        margin-left: 0%;
+        justify-content: center;
     }
 }
 
-@media all and (max-width:1220px) {
+@media all and (max-width:1265px) {
+
 
     #section_et_aside {
         flex-direction: column-reverse;
-    }
-
-    #Hébergements {
-        width: auto;
-        background-color: #F2F2F2;
-        border-radius: 20px 20px 20px 20px;
-        padding: 30px 30px 0px 30px;
-        gap: 20px;
     }
 
     .card_heb {
@@ -720,6 +714,7 @@ footer p:hover {
 
     .content_footer {
         margin-left: initial;
+        gap: 225px;
     }
 
 }
@@ -742,9 +737,35 @@ footer p:hover {
         width: auto;
         flex-flow: row nowrap;
     }
+
+    .content_footer {
+        margin-left: initial;
+        gap: 150px;
+    }
+}
+
+
+@media all and (max-width:866px) {
+    #Hébergements {
+        background-color: initial;
+        /* pour enlever le background */
+    }
+
+    .ligne_un, .ligne_deux {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card_heb {
+        /* chaque carte */
+        width: 100%;
+    }
 }
 
 @media all and (max-width:768px) {
+
     body {
         margin: 0px;
     }
@@ -785,56 +806,8 @@ footer p:hover {
         width: 100%;
     }
 
-    #Hébergements {
-        background-color: initial;
-        /* pour enlever le background */
-    }
-
-    .ligne_un, .ligne_deux {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card_heb {
-        /* chaque carte */
-        width: 100%;
-    }
-
-    #Populaires {
-        border-radius: 0px;
-    }
-
-    #Activités {
-        padding: 0 2%;
-    }
-
-    .all_cards_act {
-        /* bloc parent de toutes les cards */
-        flex-flow: column nowrap;
-        align-items: center;
-    }
-
-    .card_act {
-        /* chaque carte */
-        width: 98%;
-    }
-
-    .content_footer {
-        display: flex;
-        flex-direction: column;
-        width: 83%;
-        gap: 15px;
-    }
-
-
-
-    /* _____________________ FIN HEADER _____________________ */
-    /* _____________________ DEBUT HEADER MAIN_____________________ */
-
     .header_main {
-        padding-left: 10px;
+        padding-left: 20px;
     }
 
     .divBDR {
@@ -853,7 +826,7 @@ footer p:hover {
 
     .buttonIC {
         display: initial;
-        height: 100%;
+        height: 45px;
         min-width: 45px;
         font-size: 14px;
         color: white;
@@ -875,6 +848,38 @@ footer p:hover {
     }
 
     .listbtnfilter {
-        margin: 5px 20px 5px 0px;
+        padding-right: 20px;
+        gap: 15px;
+    }
+
+    #Populaires {
+        border-radius: 0px;
+    }
+
+    #Activités {
+        padding: 0 30px;
+    }
+
+    .all_cards_act {
+        /* bloc parent de toutes les cards */
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .card_act {
+        /* chaque carte */
+        width: 98%;
+    }
+
+    footer {
+        justify-content: flex-start;
+        padding: 0 30px;
+    }
+
+    .content_footer {
+        display: flex;
+        flex-direction: column;
+        width: 83%;
+        gap: 15px;
     }
 }
