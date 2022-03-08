@@ -807,18 +807,17 @@ footer p:hover {
         width: 50%;
     }
 
+    .lienpuce:hover {
+        border-top: none;
+    }
+
     .lienpuce1 {
         border-bottom: 3px solid #0065FC;
         border-top: none;
     }
 
     .lienpuce2 {
-        border-bottom: 3px solid #aab2be4f;
-        border-top: none;
-    }
-
-    .lienpuce:hover {
-        border-bottom: 3px solid #0065FC;
+        border-bottom: 3px solid #F2F2F2;
         border-top: none;
     }
 
