@@ -6,7 +6,7 @@
 
 * {
     box-sizing: border-box;
-    /* permet d'inclure la bordure et le remplissage ajouté à un élément dans le calcul vis à vis du bloc parent */
+    /* permet d'inclure la bordure et le remplissage ajoutés à un élément dans le calcul vis à vis du bloc parent */
     scroll-behavior: smooth;
 }
 
@@ -41,26 +41,17 @@ a {
     flex-flow: row nowrap;
     width: 100%;
     justify-content: space-between;
-    order: 1;
+    /* order: 1; */
 }
 
 .div_logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10%;
-    background-color: white;
 }
 
 .logo {
     max-width: 100px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
 }
 
 .listenav {
@@ -193,6 +184,10 @@ input::placeholder {
     box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
 }
 
+.buttonIC {
+    display: none;
+}
+
 /* _____________________ FIN BARRE DE RECHERCHE _____________________ */
 
 /* _____________________ DEBUT FILTRES _____________________ */
@@ -316,18 +311,24 @@ input::placeholder {
     transition-duration: 200ms;
 }
 
+.star {
+    color: #0065FC;
+}
+
+.vide {
+    color: #d8d8d8;
+}
+
 #Hébergements {
+    display: flex;
+    flex-flow: column nowrap;
     background-color: #F2F2F2;
-    column-gap: unset;
-    /* empêche les éléments d'aller à la ligne avec la valeur 48.5% en width */
-    row-gap: 30px;
-    border-radius: 20px 20px 20px 20px;
-    padding: 30px 30px 0px 30px;
+    border-radius: 20px;
+    padding: 30px;
     gap: 20px;
 }
 
 .titre_heb {
-    display: flex;
     width: 100%;
     font-size: 20px;
     font-variation-settings: 'wght'500;
@@ -335,12 +336,19 @@ input::placeholder {
     padding: 0px;
 }
 
+.all_cards {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    /* écart entre les deux lignes */
+}
+
 .ligne_un, .ligne_deux {
-    width: 100%;
     display: flex;
     flex-direction: row;
+    width: 100%;
     gap: 20px;
-    margin: 20px 0;
+    /* écart entre chaque carte */
 }
 
 .card_heb {
@@ -353,18 +361,17 @@ input::placeholder {
     border-radius: 25px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
     transition-duration: 100ms;
+    /* temps pour le retour de la transition */
 }
 
-
 .img_heb {
-    display: flex;
     width: 100%;
 }
 
 .card_heb img {
     width: 100%;
     height: 115px;
-    margin: 0px 0px 5px 0px;
+    margin: 0 0 5px 0;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
@@ -372,23 +379,22 @@ input::placeholder {
 .description_card_heb {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
-    margin-left: 10px
+    margin-left: 10px;
+    gap: 5px;
+    /* écart entre le titre et le p */
 }
 
 .titre_card_heb {
-    width: 100%;
     font-size: 15px;
     font-variation-settings: 'wght'550;
     margin: 0px;
 }
 
 .pcard {
-    width: 100%;
     font-size: 14px;
     font-variation-settings: 'wght'450;
-    margin: 5px 0 0 0;
+    margin: 0px;
 }
 
 .lowprice {
@@ -403,29 +409,12 @@ input::placeholder {
     display: flex;
     width: 100%;
     font-size: 13px;
-    margin: 5px 0 10px 10px;
-
-}
-
-.star {
-    color: #0065FC;
-}
-
-.vide {
-    color: #d8d8d8;
+    margin: 7px 0 10px 10px;
 }
 
 .footer_heb {
     width: 100%;
-    height: 5%;
-}
-
-.titrefooter {
-    width: 100%;
-    height: 100%;
-    font-size: 17px;
-    margin: 0 0 0 10px;
-    /* pour aligner avec les cartes */
+    margin: 10px 0;
     font-variation-settings: 'wght'500;
 }
 
@@ -434,14 +423,13 @@ input::placeholder {
 #Populaires {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
     background-color: #F2F2F2;
     border-radius: 20px;
-    padding: 30px 20px 30px 20px;
-    width: 100%;
+    padding: 30px;
     margin: 0px;
     gap: 20px;
+    /* écart entre le titre et les cartes */
 }
 
 .header_pop {
@@ -449,15 +437,13 @@ input::placeholder {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: auto;
     padding: 0px;
 }
 
 .titreaside {
     font-size: 20px;
     font-variation-settings: 'wght'500;
-    margin: 0px 10px 0 0;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -466,7 +452,6 @@ input::placeholder {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    align-items: space-between;
     height: 100%;
 }
 
@@ -476,13 +461,11 @@ input::placeholder {
     height: 140px;
     background-color: white;
     border: 5px solid white;
-    padding-right: 1%;
     border-radius: 25px;
     gap: 10px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
     transition-duration: 100ms;
 }
-
 
 .img_pop img {
     width: 110px;
@@ -490,12 +473,6 @@ input::placeholder {
     margin: 0px;
     object-fit: cover;
     border-radius: 20px 0px 0px 20px;
-}
-
-.img_pop {
-    display: flex;
-    width: 110px;
-    height: 100%;
 }
 
 .titre_card_pop {
@@ -509,16 +486,16 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     min-width: 150px;
-    margin: 15px 0 10px 15px;
+    margin: 10px;
+    gap: 7px;
 }
 
 .note_star_pop {
     display: flex;
-    width: 100%;
     font-size: 13px;
     margin-top: auto;
+    /* en valeur auto, la marge prend totu l'espace dispo sur l'axe correspondant */
 }
 
 /*_______________________ FIN - ASIDE _______________________*/
@@ -530,7 +507,6 @@ input::placeholder {
 #Activités {
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
     height: auto;
     gap: 20px;
     /*pour séparer le titre des cards */
@@ -547,11 +523,13 @@ input::placeholder {
     /* bloc parent de toutes les cards */
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    /* permet aux cartes d'aller à la ligne, sur la droite plutôt qu'en bas */
     align-content: space-between;
+    /* align-content gère l'espacement des éléments sur l'axe secondaire donc horizontal ici*/
     width: 100%;
     height: 410px;
     gap: 30px;
+    /* écart pour le align-content */
 }
 
 .card_act {
@@ -561,19 +539,20 @@ input::placeholder {
     width: 23%;
     background-color: white;
     border-radius: 25px;
-    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
     margin: 0px;
+    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
     transition-duration: 100ms;
     /* permet la transition "retour" quand j'enlève mon curseur */
 }
 
-.card_act .img_act {
-    display: flex;
-    width: 100%;
+#Activités .card_act:hover {
+    transform: scale(1.05);
+    transition-duration: 200ms;
 }
 
 .card_act img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
@@ -626,17 +605,12 @@ input::placeholder {
     height: 140px;
 }
 
-#Activités .card_act:hover {
-    transform: scale(1.05);
-    transition-duration: 200ms;
-}
-
 /* _____________________ DEBUT FOOTER _____________________ */
 /* _____________________ DEBUT FOOTER _____________________ */
 
 footer {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: center;
     width: 120%;
     margin-left: -10%;
@@ -770,15 +744,6 @@ footer p:hover {
     }
 }
 
-
-@media all and (min-width:768px) {
-    .buttonIC {
-        display: none;
-    }
-
-    /* j'aurais pu faire un visibility : hidden (s'affiche tjrs dans le HTML et dans le CSS, ses dimensions sont toujours là du coup gênant) ou un display_none (alors que oui non) */
-}
-
 @media all and (max-width:768px) {
     body {
         margin: 0px;
@@ -805,16 +770,6 @@ footer p:hover {
         width: 50%;
     }
 
-    .div_logo {
-        display: flex;
-        width: 100%;
-    }
-
-    #Hébergements {
-        background-color: initial;
-    }
-
-
     .lienpuce1 {
         border-bottom: 3px solid #0065FC;
         border-top: none;
@@ -825,17 +780,30 @@ footer p:hover {
         border-top: none;
     }
 
+    .div_logo {
+        display: flex;
+        width: 100%;
+    }
+
+    #Hébergements {
+        background-color: initial;
+        /* pour enlever le background */
+    }
+
     .ligne_un, .ligne_deux {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin: 20px 0;
     }
 
     .card_heb {
         /* chaque carte */
         width: 100%;
+    }
+
+    #Populaires {
+        border-radius: 0px;
     }
 
     #Activités {
@@ -884,6 +852,7 @@ footer p:hover {
     }
 
     .buttonIC {
+        display: initial;
         height: 100%;
         min-width: 45px;
         font-size: 14px;
