@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+    /* permet d'inclure la bordure et le remplissage ajouté à un élément dans le calcul vis à vis du bloc parent */
     scroll-behavior: smooth;
 }
 
@@ -19,6 +20,7 @@ body {
     font-family: Raleway;
     display: flex;
     flex-flow: column nowrap;
+    gap: 30px;
 }
 
 ul {
@@ -34,7 +36,7 @@ a {
 /* _____________________ DEBUT HEADER _____________________ */
 /* _____________________ DEBUT HEADER _____________________ */
 
-header {
+#header {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
@@ -58,7 +60,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 500px;
     background-color: white;
 }
 
@@ -273,11 +274,12 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
+    min-width: 25px;
+    max-width: 25px;
     height: 25px;
     margin: 0px 0px 0px 0px;
     background-color: white;
-    border: 2px solid #dbdbdb9f;
+    border: 2px solid #dbdbdbb7;
     border-radius: 25px 25px 25px 25px;
 }
 
@@ -304,19 +306,17 @@ input::placeholder {
     gap: 20px;
 }
 
-#section_et_aside .article_heb:hover {
+#section_et_aside .card_heb:hover {
     transform: scale(1.05);
     transition-duration: 200ms;
 }
 
-#section_et_aside .article_pop:hover {
+#section_et_aside .card_pop:hover {
     transform: scale(1.05);
     transition-duration: 200ms;
 }
 
 #Hébergements {
-    /* width: auto; */
-    width: 70;
     background-color: #F2F2F2;
     column-gap: unset;
     /* empêche les éléments d'aller à la ligne avec la valeur 48.5% en width */
@@ -343,7 +343,7 @@ input::placeholder {
     margin: 20px 0;
 }
 
-.article_heb {
+.card_heb {
     /* chaque carte */
     display: flex;
     flex-flow: column nowrap;
@@ -361,7 +361,7 @@ input::placeholder {
     width: 100%;
 }
 
-.article_heb img {
+.card_heb img {
     width: 100%;
     height: 115px;
     margin: 0px 0px 5px 0px;
@@ -369,7 +369,7 @@ input::placeholder {
     border-radius: 20px 20px 0px 0px;
 }
 
-.description_article_heb {
+.description_card_heb {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -377,14 +377,14 @@ input::placeholder {
     margin-left: 10px
 }
 
-.titre_article_heb {
+.titre_card_heb {
     width: 100%;
     font-size: 15px;
     font-variation-settings: 'wght'550;
     margin: 0px;
 }
 
-.particle {
+.pcard {
     width: 100%;
     font-size: 14px;
     font-variation-settings: 'wght'450;
@@ -470,7 +470,7 @@ input::placeholder {
     height: 100%;
 }
 
-.article_pop {
+.card_pop {
     /* chaque carte */
     display: flex;
     height: 140px;
@@ -498,14 +498,14 @@ input::placeholder {
     height: 100%;
 }
 
-.titre_article_pop {
+.titre_card_pop {
     width: 100%;
     font-size: 15px;
     font-variation-settings: 'wght'550;
     margin: 0px;
 }
 
-.description_article_pop {
+.description_card_pop {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -554,7 +554,7 @@ input::placeholder {
     gap: 30px;
 }
 
-.article_act {
+.card_act {
     /* chaque carte */
     display: flex;
     flex-flow: column nowrap;
@@ -567,18 +567,18 @@ input::placeholder {
     /* permet la transition "retour" quand j'enlève mon curseur */
 }
 
-.article_act .img_act {
+.card_act .img_act {
     display: flex;
     width: 100%;
 }
 
-.article_act img {
+.card_act img {
     width: 100%;
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
 }
 
-.titre_article_act {
+.titre_card_act {
     font-size: 17px;
     font-variation-settings: 'wght'550;
     margin: 15px 0 15px 20px;
@@ -586,7 +586,7 @@ input::placeholder {
 
 /* Hauteur des cards et des images */
 
-.article1, .article4 {
+.card1, .card4 {
     height: 400px;
 }
 
@@ -594,7 +594,7 @@ input::placeholder {
     height: 350px;
 }
 
-.article2 {
+.card2 {
     height: 220px;
 }
 
@@ -602,7 +602,7 @@ input::placeholder {
     height: 170px;
 }
 
-.article3 {
+.card3 {
     height: 150px;
 }
 
@@ -610,7 +610,7 @@ input::placeholder {
     height: 100px;
 }
 
-.article5 {
+.card5 {
     height: 180px;
 }
 
@@ -618,7 +618,7 @@ input::placeholder {
     height: 130px;
 }
 
-.article6 {
+.card6 {
     height: 190px;
 }
 
@@ -626,7 +626,7 @@ input::placeholder {
     height: 140px;
 }
 
-#Activités .article_act:hover {
+#Activités .card_act:hover {
     transform: scale(1.05);
     transition-duration: 200ms;
 }
@@ -642,14 +642,13 @@ footer {
     margin-left: -10%;
     background-color: #F2F2F2;
     order: 3;
-    margin-top: 50px;
 }
 
 .content_footer {
     display: flex;
     flex-flow: row nowrap;
-    width: 83%;
-    gap: 150px;
+    gap: 100px;
+    margin-left: -38%;
 }
 
 footer h3 {
@@ -666,7 +665,7 @@ footer p:hover {
 
 /*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
 
-@media screen and (max-width:1465px) {
+@media all and (max-width:1465px) {
 
     /* juste pour le footer */
     footer {
@@ -675,7 +674,7 @@ footer p:hover {
     }
 }
 
-@media screen and (max-width:1220px) {
+@media all and (max-width:1220px) {
 
     #section_et_aside {
         flex-direction: column-reverse;
@@ -689,7 +688,7 @@ footer p:hover {
         gap: 20px;
     }
 
-    .article_heb {
+    .card_heb {
         /* chaque carte */
         width: 100%;
     }
@@ -703,28 +702,41 @@ footer p:hover {
         gap: 20px;
     }
 
-    .article_pop {
+    .card_pop {
         /* chaque carte */
-        width: 30%;
+        width: 32%;
     }
 
     .all_cards_act {
         flex-flow: row wrap;
-        height: auto;
         justify-content: space-between;
         column-gap: unset;
+        height: auto;
         /* empêche les éléments d'aller à la ligne avec la valeur 48.5% en width */
         row-gap: 30px;
     }
 
-    .article_act {
+    .card_act {
         width: 48.5%;
         height: 200px;
     }
 
-    article .img_act {
+
+    .card_act .img_act {
         width: 100%;
         height: 150px;
+    }
+
+    #section_et_aside .card_heb:hover {
+        transform: scale(1.025);
+    }
+
+    #section_et_aside .card_pop:hover {
+        transform: scale(1.025);
+    }
+
+    #Activités .card_act:hover {
+        transform: scale(1.025);
     }
 
     footer {
@@ -732,20 +744,13 @@ footer p:hover {
         margin-left: 0px;
     }
 
-    #section_et_aside .article_heb:hover {
-        transform: scale(1.025);
+    .content_footer {
+        margin-left: initial;
     }
 
-    #section_et_aside .article_pop:hover {
-        transform: scale(1.025);
-    }
-
-    #Activités .article_act:hover {
-        transform: scale(1.025);
-    }
 }
 
-@media screen and (max-width:992px) {
+@media all and (max-width:992px) {
     #bodiv {
         margin: 0px;
     }
@@ -755,13 +760,18 @@ footer p:hover {
         flex-direction: column;
     }
 
-    .article_pop {
+    .card_pop {
         width: 100%;
+    }
+
+    #footer .section {
+        width: auto;
+        flex-flow: row nowrap;
     }
 }
 
 
-@media screen and (min-width:768px) {
+@media all and (min-width:768px) {
     .buttonIC {
         display: none;
     }
@@ -769,22 +779,29 @@ footer p:hover {
     /* j'aurais pu faire un visibility : hidden (s'affiche tjrs dans le HTML et dans le CSS, ses dimensions sont toujours là du coup gênant) ou un display_none (alors que oui non) */
 }
 
-@media screen and (max-width:768px) {
+@media all and (max-width:768px) {
     body {
         margin: 0px;
     }
 
-    header {
+    #bodiv {
+        width: auto;
+    }
+
+    #header {
         flex-flow: column nowrap;
         justify-content: center;
         margin: 0px;
     }
 
-    .lienpuce {
-        width: 50%;
+    .listenav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
     }
 
-    .lienpuce1 {
+    .lienpuce {
         width: 50%;
     }
 
@@ -792,6 +809,11 @@ footer p:hover {
         display: flex;
         width: 100%;
     }
+
+    #Hébergements {
+        background-color: initial;
+    }
+
 
     .lienpuce1 {
         border-bottom: 3px solid #0065FC;
@@ -811,7 +833,7 @@ footer p:hover {
         margin: 20px 0;
     }
 
-    .article_heb {
+    .card_heb {
         /* chaque carte */
         width: 100%;
     }
@@ -826,7 +848,7 @@ footer p:hover {
         align-items: center;
     }
 
-    .article_act {
+    .card_act {
         /* chaque carte */
         width: 98%;
     }
@@ -837,70 +859,53 @@ footer p:hover {
         width: 83%;
         gap: 15px;
     }
-}
 
 
-/* _____________________ FIN HEADER _____________________ */
-/* _____________________ DEBUT HEADER MAIN_____________________ */
 
-.h2_1 {
-    margin: 5px 0px 3px 10px;
-}
+    /* _____________________ FIN HEADER _____________________ */
+    /* _____________________ DEBUT HEADER MAIN_____________________ */
 
-.p1 {
-    margin: 0 0 0 10px;
-}
+    .header_main {
+        padding-left: 10px;
+    }
 
-.divBDR {
-    margin: 20px 0px 0px 10px;
-}
+    .divBDR {
+        margin: 20px 0px 0px 0px;
+    }
 
-.formBDR {
-    margin-right: 10px;
-    /* Pour pas que la loupe colle sur la droite */
-}
+    .saisieBDR {
+        width: 100%;
+        flex-grow: 1;
+        /* La barre de saisie s'étend sur toute la largeur du bloc parent */
+    }
 
-.saisieBDR {
-    flex-grow: 1;
-    /* La barre de saisie s'étend sur toute la largeur du bloc parent */
-}
+    .buttonBDR {
+        display: none;
+    }
 
-.buttonBDR {
-    display: none;
-}
+    .buttonIC {
+        height: 100%;
+        min-width: 45px;
+        font-size: 14px;
+        color: white;
+        flex-grow: 2;
+        background-color: #0065FC;
+        border: 0px;
+        border-radius: 15px 15px 15px 15px;
+        /* margin-left:-25px; => Alternative au position:absolute */
+        position: relative;
+        right: 10px;
+    }
 
-.buttonIC {
-    height: 100%;
-    max-width: 45px;
-    font-size: 14px;
-    color: white;
-    flex-grow: 2;
-    background-color: #0065FC;
-    border: 0px;
-    border-radius: 15px 15px 15px 15px;
-    /* margin-left:-25px; => Alternative au position:absolute */
-    position: relative;
-    right: 10px;
-}
+    .buttonIC:hover {
+        background-color: #0058dd;
+    }
 
-.buttonIC:hover {
-    background-color: #0058dd;
-}
+    .buttonIC:active {
+        box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
+    }
 
-.buttonIC:active {
-    box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
-}
-
-/* _____________________ DEBUT FILTRES _____________________ */
-.divfilter {
-    margin-left: 10px;
-}
-
-.listbtnfilter {
-    margin: 5px 20px 5px 0px;
-
-}
-
-.resultfilter {
-    margin-left: 10px;
+    .listbtnfilter {
+        margin: 5px 20px 5px 0px;
+    }
 }
