@@ -733,14 +733,19 @@ footer p:hover {
         width: 100%;
     }
 
+    footer {
+        display: initial;
+    }
+
     #footer .section {
         width: auto;
         flex-flow: row nowrap;
     }
 
     .content_footer {
+        justify-content: space-between;
         margin-left: initial;
-        gap: 150px;
+        gap: 125px;
     }
 }
 
