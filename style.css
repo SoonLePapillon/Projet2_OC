@@ -668,6 +668,14 @@ footer p:hover {
         flex-direction: column-reverse;
     }
 
+    #section_et_aside .card_heb:hover {
+        transform: scale(1.025);
+    }
+
+    #section_et_aside .card_pop:hover {
+        transform: scale(1.025);
+    }
+
     .card_heb {
         /* chaque carte */
         width: 100%;
@@ -684,6 +692,10 @@ footer p:hover {
     .card_pop {
         /* chaque carte */
         width: 32%;
+    }
+
+    #Activités {
+        padding: 30px;
     }
 
     .all_cards_act {
@@ -704,14 +716,6 @@ footer p:hover {
     .card_act .img_act {
         width: 100%;
         height: 150px;
-    }
-
-    #section_et_aside .card_heb:hover {
-        transform: scale(1.025);
-    }
-
-    #section_et_aside .card_pop:hover {
-        transform: scale(1.025);
     }
 
     #Activités .card_act:hover {
@@ -754,7 +758,7 @@ footer p:hover {
     }
 
     .content_footer {
-        justify-content: space-between;
+        justify-content: space-around;
         margin-left: initial;
         gap: 125px;
     }
@@ -777,6 +781,11 @@ footer p:hover {
     .card_heb {
         /* chaque carte */
         width: 100%;
+    }
+
+    .content_footer {
+        justify-content: space-around;
+        gap: 80px;
     }
 }
 
@@ -893,7 +902,6 @@ footer p:hover {
     }
 
     .content_footer {
-        display: flex;
         flex-direction: column;
         width: 83%;
         gap: 15px;
