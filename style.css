@@ -42,7 +42,6 @@ a {
     flex-flow: row nowrap;
     width: 100%;
     justify-content: space-between;
-    /* order: 1; */
 }
 
 .div_logo {
@@ -155,7 +154,7 @@ main {
     width: 250px;
     border: 1px solid #F2F2F2;
     padding: 0 15px;
-    /* Pour ne pas coller l'écriture sur les côtés*/
+    /* Pour ne pas coller l'écriture sur les côtés */
     font-weight: bold;
     font-size: large;
     outline: none;
@@ -189,6 +188,7 @@ main {
 
 .buttonIC {
     display: none;
+    /* Cache le bouton loupe qui sert au responsive smartphone */
 }
 
 /* _____________________ FIN BARRE DE RECHERCHE _____________________ */
@@ -203,8 +203,9 @@ main {
     align-items: center;
     width: 100%;
     row-gap: 0px;
-    /* entre les lignes */
+    /* espace entre les lignes */
     column-gap: 20px;
+    /* espace entre les colonnes */
 }
 
 .hfilter {
@@ -231,8 +232,7 @@ main {
     border: 3px solid #DEEBFF;
     border-radius: 25px;
     padding-left: 0px;
-    /* position: relative; */
-    /* right: 10px; <= j'avais fait ça avant pour placer mes bordures de l'icone au-dessus de la bordure du champ de saisie */
+    /* position: relative | right: 10px; <= j'avais fait ça avant pour placer mes bordures de l'icone au-dessus de la bordure du champ de saisie */
 }
 
 .icnbutton {
@@ -497,7 +497,7 @@ main {
     display: flex;
     font-size: 13px;
     margin-top: auto;
-    /* en valeur auto, la marge prend totu l'espace dispo sur l'axe correspondant */
+    /* en valeur auto, la marge prend tout l'espace disponible sur l'axe correspondant */
 }
 
 /*_______________________ FIN - ASIDE _______________________*/
@@ -525,7 +525,7 @@ main {
     /* bloc parent de toutes les cards */
     display: flex;
     flex-flow: column wrap;
-    /* permet aux cartes d'aller à la ligne, sur la droite plutôt qu'en bas */
+    /* permet aux cartes d'aller à la ligne (sur la droite donc vu que c'est en flex column) plutôt qu'en bas */
     align-content: space-between;
     /* align-content gère l'espacement des éléments sur l'axe secondaire donc horizontal ici*/
     width: 100%;
@@ -544,7 +544,6 @@ main {
     margin: 0px;
     box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
     transition-duration: 100ms;
-    /* permet la transition "retour" quand j'enlève mon curseur */
 }
 
 #Activités .card_act:hover {
@@ -566,6 +565,7 @@ main {
 }
 
 /* Hauteur des cards et des images */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 
 .card1, .card4 {
     height: 400px;
@@ -703,7 +703,6 @@ footer p:hover {
         justify-content: space-between;
         column-gap: unset;
         height: auto;
-        /* empêche les éléments d'aller à la ligne avec la valeur 48.5% en width */
         row-gap: 30px;
     }
 
@@ -768,7 +767,7 @@ footer p:hover {
 @media all and (max-width:866px) {
     #Hébergements {
         background-color: initial;
-        /* pour enlever le background */
+        /* pour enlever le background en le remettant à sa valeur initiale donc blanc */
     }
 
     .ligne_un, .ligne_deux {
@@ -859,7 +858,6 @@ footer p:hover {
         background-color: #0065FC;
         border: 0px;
         border-radius: 15px 15px 15px 15px;
-        /* margin-left:-25px; => Alternative au position:absolute */
         position: relative;
         right: 10px;
     }
