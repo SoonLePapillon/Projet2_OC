@@ -1,90 +1,110 @@
 @font-face {
-    font-family: Raleway;
-    src: url("Ressources/font/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
-    src: url("Ressources/font/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-family: Raleway;
+  src: url("Ressources/font/Raleway-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  src: url("Ressources/font/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 
-* {
-    box-sizing: border-box;
-    /* permet d'inclure la bordure et le remplissage ajoutés à un élément dans le calcul vis à vis du bloc parent */
-    scroll-behavior: smooth;
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    margin: 0 5px;
-    overflow: hidden visible;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  overflow: hidden visible;
+  font-family: Raleway;
 }
 
-#bodiv {
-    font-family: Raleway;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 30px;
+header,
+main {
+  max-width: 1370px;
+}
+
+h1 {
+  width: 100%;
+  font-size: 24px;
+  font-variation-settings: "wght" 500;
+  background-color: white;
+}
+
+h2 {
+  font-size: 20px;
+  font-variation-settings: "wght" 500;
+}
+
+h3 {
+  font-size: 16px;
+  font-variation-settings: "wght" 500;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
+}
+
+p {
+  font-variation-settings: "wght" 450;
 }
 
 a {
-    color: black;
-    text-decoration: none;
-    /* pour enlever le soulignement de base des liens */
+  color: black;
+  text-decoration: none;
 }
 
 /* _____________________ DEBUT HEADER _____________________ */
 /* _____________________ DEBUT HEADER _____________________ */
 
-#header {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    justify-content: space-between;
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  min-width: 1370px;
 }
 
 .div_logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    max-width: 100px;
+  max-width: 100px;
 }
 
-.listenav {
-    display: flex;
-    margin: 0px;
-    padding: 0px;
+.list_nav {
+  display: flex;
 }
 
-.lienpuce {
-    width: 200px;
-    height: 70px;
-    margin: 0px;
+.list_nav li {
+  width: 200px;
+  height: 70px;
 }
 
 nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.lienpuce1 {
-    border-top: 3px solid #0065FC;
+.nav_link_1 {
+  border-top: 3px solid #0065fc;
 }
 
-.lienpuce1 a {
-    color: #0065FC;
+.nav_link_1 a {
+  color: #0065fc;
 }
 
-.lienpuce:hover {
-    color: #0065FC;
-    border-top: 3px solid #0065FC;
+.list_nav li:hover {
+  color: #0065fc;
+  border-top: 3px solid #0065fc;
 }
 
 /* _____________________ FIN HEADER _____________________ */
@@ -94,814 +114,633 @@ nav a {
 /* _____________________ DEBUT MAIN_____________________ */
 
 main {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0px;
-    gap: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
 }
 
 /* _____________________ DEBUT BARRE DE RECHERCHE _____________________ */
 
 .header_main {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  margin-top: 30px;
 }
 
-.h1_p {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 10px;
+.research {
+  width: 100%;
+  height: 45px;
 }
 
-.h1_page {
-    font-size: 24px;
-    font-variation-settings: 'wght'500;
-    margin: 0;
-    background-color: white;
+.research_form {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
 }
 
-.p_page {
-    margin: 0;
+.research_form_lab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  padding: 12px;
+  background-color: #f2f2f2;
+  border-radius: 15px 0px 0px 15px;
 }
 
-.divBDR {
-    width: 100%;
-    height: 45px;
+.research_form_lab .dot {
+  font-size: 18px;
 }
 
-.formBDR {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100%;
+.research_form_input {
+  width: 250px;
+  min-width: 150px;
+  border: 1px solid #f2f2f2;
+  padding: 0 15px;
+  font-size: large;
+  outline: none;
 }
 
-.labelBDR {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    padding: 12px;
-    background-color: #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
+.research_form_input::placeholder {
+  opacity: 100%;
+  color: black;
+  font-size: large;
 }
 
-.dot {
-    font-size: 18px;
+.research_form_btn_text {
+  width: 125px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #0065fc;
+  border: 1px solid #0065fc;
+  border-radius: 0px 15px 15px 0px;
 }
 
-.saisieBDR {
-    width: 250px;
-    border: 1px solid #F2F2F2;
-    padding: 0 15px;
-    /* Pour ne pas coller l'écriture sur les côtés */
-    font-weight: bold;
-    font-size: large;
-    outline: none;
-    /* Sert à retirer la bordure par défaut quand on clique sur la zone de saisie */
-
+button:hover {
+  background-color: #0058dd;
 }
 
-.saisieBDR::placeholder {
-    opacity: 100%;
-    color: black;
-    font-size: large;
+button:active {
+  box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
 }
 
-.buttonBDR {
-    width: 125px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: #0065FC;
-    border: 1px solid #0065FC;
-    border-radius: 0px 15px 15px 0px;
-}
-
-.buttonBDR:hover {
-    background-color: #0058dd;
-}
-
-.buttonBDR:active {
-    box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
-}
-
-.buttonIC {
-    display: none;
-    /* Cache le bouton loupe qui sert au responsive smartphone */
+.research_form_btn_icn {
+  display: none;
 }
 
 /* _____________________ FIN BARRE DE RECHERCHE _____________________ */
 
 /* _____________________ DEBUT FILTRES _____________________ */
 
-.divfilter {
-    /* div des filtres */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    row-gap: 0px;
-    /* espace entre les lignes */
-    column-gap: 20px;
-    /* espace entre les colonnes */
+.filters {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  row-gap: 0px;
+  column-gap: 20px;
 }
 
-.hfilter {
-    font-variation-settings: 'wght'500;
+.filters_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  gap: 20px;
 }
 
-.listbtnfilter {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    margin: 0px;
-    padding: 0px;
-    gap: 20px;
+.filters_list li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0px 20px 0px 0px;
+  border-radius: 25px;
+  font-variation-settings: "wght" 700;
+  border: 2px solid #e2e2e2;
+  border-left: none;
+  gap: 5px;
 }
 
-.spanicn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    margin: 0px;
-    background-color: #DEEBFF;
-    border: 3px solid #DEEBFF;
-    border-radius: 25px;
-    padding-left: 0px;
-    /* position: relative | right: 10px; <= j'avais fait ça avant pour placer mes bordures de l'icone au-dessus de la bordure du champ de saisie */
+.filters_list li:hover {
+  color: white;
+  background-color: #0065fc;
 }
 
-.icnbutton {
-    color: #0065FC;
-    padding: 5px;
-    font-size: 20px;
+.filters_list_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #deebff;
+  border: 3px solid #deebff;
+  border-radius: 25px;
+  padding-left: 0px;
 }
 
-.buttonfilter {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    padding: 0px 20px 0px 0px;
-    border-radius: 25px;
-    font-variation-settings: 'wght'700;
-    border: 2px solid #dadada;
-    border-left: none;
-    /* enlève la bordure à gauche pour pas que ça fasse moche avec la bordure de l'icone */
-    gap: 5px;
-    /* espace entre l'icone et le texte */
+.filters_list i {
+  color: #0065fc;
+  padding: 5px;
+  font-size: 20px;
 }
 
-.buttonfilter:hover {
-    color: white;
-    background-color: #0065FC;
+.result_filter {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
 }
 
-.resultfilter {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 10px;
-}
-
-.infoicn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 25px;
-    max-width: 25px;
-    height: 25px;
-    margin: 0px;
-    border: 2px solid #dbdbdbb7;
-    border-radius: 25px;
-}
-
-.icni {
-    color: #0065FC;
-    font-size: 13px;
-}
-
-.pinfo {
-    margin: 0px;
+.result_filter i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 25px;
+  max-width: 25px;
+  height: 25px;
+  border: 2px solid #dbdbdbb7;
+  border-radius: 25px;
+  color: #0065fc;
+  font-size: 13px;
 }
 
 /* _____________________ FIN - FILTRES _____________________ */
-
 /* _____________________ FIN - HEADER MAIN _____________________ */
 
 /* _____________________ DEBUT SECTION + ASIDE  _____________________ */
 
-#section_et_aside {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    padding: 0px;
-    gap: 20px;
+#section_and_aside {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
 }
 
-#section_et_aside .card_heb:hover {
-    transform: scale(1.05);
-    transition-duration: 200ms;
+#section_and_aside .card_heb:hover,
+.card_pop:hover {
+  transform: scale(1.05);
+  transition-duration: 200ms;
 }
 
-#section_et_aside .card_pop:hover {
-    transform: scale(1.05);
-    transition-duration: 200ms;
+.card_review {
+  display: flex;
+  width: 100%;
+  font-size: 13px;
+  margin: 7px 0 10px 10px;
 }
 
-.star {
-    color: #0065FC;
+#Populaires .card_review {
+  margin: 0;
+  margin-top: auto;
 }
 
-.vide {
-    color: #d8d8d8;
+.card_review i {
+  color: #0065fc;
 }
+.card_review .empty {
+  color: #d8d8d8;
+}
+
+/* -------------------  */
 
 #Hébergements {
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: #F2F2F2;
-    border-radius: 20px;
-    padding: 30px;
-    gap: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 30px;
+  gap: 20px;
 }
 
-.titre_heb {
-    width: 100%;
-    font-size: 20px;
-    font-variation-settings: 'wght'500;
-    margin: 0px;
-    padding: 0px;
+#Hébergements h2 {
+  font-size: 20px;
 }
 
-.all_cards {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 20px;
-    /* écart entre les deux lignes */
-}
-
-.ligne_un, .ligne_deux {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-    /* écart entre chaque carte */
+.all_cards_heb {
+  display: flex;
+  flex-flow: row wrap;
+  width: 850px;
+  gap: 20px;
 }
 
 .card_heb {
-    /* chaque carte */
-    display: flex;
-    flex-flow: column nowrap;
-    min-width: 250px;
-    background-color: white;
-    border: 5px solid white;
-    border-radius: 25px;
-    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
-    transition-duration: 100ms;
-    /* temps pour le retour de la transition */
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: 270px;
+  max-width: 270px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 25px;
+  box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
+  transition-duration: 100ms;
 }
 
-.img_heb {
-    width: 100%;
+.card_heb_img {
+  width: 100%;
 }
 
 .card_heb img {
-    width: 100%;
-    height: 115px;
-    margin: 0 0 5px 0;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 115px;
+  margin: 0 0 5px 0;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.description_card_heb {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 10px;
-    gap: 5px;
-    /* écart entre le titre et le p */
+.card_heb_desc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10px;
+  gap: 5px;
 }
 
-.titre_card_heb {
-    font-size: 15px;
-    font-variation-settings: 'wght'550;
-    margin: 0px;
+.lowprice,
+.euro_sign {
+  font-variation-settings: "wght" 650;
 }
 
-.pcard {
-    font-size: 14px;
-    font-variation-settings: 'wght'450;
-    margin: 0px;
-}
-
-.lowprice {
-    font-variation-settings: 'wght'650;
-}
-
-.€ {
-    font-variation-settings: 'wght'650;
-}
-
-.note_star_heb {
-    display: flex;
-    width: 100%;
-    font-size: 13px;
-    margin: 7px 0 10px 10px;
-}
-
-.footer_heb {
-    width: 100%;
-    margin: 10px 0;
-    font-variation-settings: 'wght'500;
+.show_more {
+  margin: 10px 0;
+  font-variation-settings: "wght" 600;
 }
 
 /*_______________________ DEBUT - ASIDE _______________________*/
 
 #Populaires {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #F2F2F2;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 0px;
-    gap: 20px;
-    /* écart entre le titre et les cartes */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 30px;
+  gap: 20px;
 }
 
-.header_pop {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
+.header_aside {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.titreaside {
-    font-size: 20px;
-    font-variation-settings: 'wght'500;
-    margin: 0px;
-    padding: 0px;
-}
-
-#all_cards_pop {
-    /* div */
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    height: 100%;
+.all_cards_pop {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card_pop {
-    /* chaque carte */
-    display: flex;
-    height: 140px;
-    background-color: white;
-    border: 5px solid white;
-    border-radius: 25px;
-    gap: 10px;
-    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
-    transition-duration: 100ms;
+  display: flex;
+  height: 140px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 25px;
+  gap: 10px;
+  box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.336);
+  transition-duration: 100ms;
 }
 
-.img_pop img {
-    width: 110px;
-    height: 100%;
-    margin: 0px;
-    object-fit: cover;
-    border-radius: 20px 0px 0px 20px;
+.card_pop_img > img {
+  width: 110px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 0px 0px 20px;
 }
 
-.titre_card_pop {
-    width: 100%;
-    font-size: 15px;
-    font-variation-settings: 'wght'550;
-    margin: 0px;
-}
-
-.description_card_pop {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 135px;
-    margin: 10px;
-    gap: 7px;
-}
-
-.note_star_pop {
-    display: flex;
-    font-size: 13px;
-    margin-top: auto;
-    /* en valeur auto, la marge prend tout l'espace disponible sur l'axe correspondant */
+.card_pop_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 135px;
+  margin: 10px;
+  gap: 7px;
 }
 
 /*_______________________ FIN - ASIDE _______________________*/
-
 /* _____________________ FIN SECTION + ASIDE  _____________________ */
 
 /* _____________________ DEBUT ACTIVITÉS_____________________ */
 
 #Activités {
-    display: flex;
-    flex-flow: column nowrap;
-    height: auto;
-    gap: 20px;
-    /*pour séparer le titre des cards */
-}
-
-.titre_act {
-    font-size: 20px;
-    font-variation-settings: 'wght'500;
-    margin: 0px;
-    padding: 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  gap: 20px;
 }
 
 .all_cards_act {
-    /* bloc parent de toutes les cards */
-    display: flex;
-    flex-flow: column wrap;
-    /* permet aux cartes d'aller à la ligne (sur la droite donc vu que c'est en flex column) plutôt qu'en bas */
-    align-content: space-between;
-    /* align-content gère l'espacement des éléments sur l'axe secondaire donc horizontal ici*/
-    width: 100%;
-    height: 410px;
-    gap: 30px;
-    /* écart pour le align-content */
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  width: 100%;
+  height: 410px;
+  gap: 30px;
 }
 
 .card_act {
-    /* chaque carte */
-    display: flex;
-    flex-flow: column nowrap;
-    width: 23%;
-    background-color: white;
-    border-radius: 25px;
-    margin: 0px;
-    box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
-    transition-duration: 100ms;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 23%;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 5px 8px 25px -5px rgba(0, 0, 0, 0.53);
+  transition-duration: 100ms;
 }
 
-#Activités .card_act:hover {
-    transform: scale(1.05);
-    transition-duration: 200ms;
+.card_act:hover {
+  transform: scale(1.05);
+  transition-duration: 200ms;
 }
 
 .card_act img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.titre_card_act {
-    font-size: 17px;
-    font-variation-settings: 'wght'550;
-    margin: 15px 0 15px 20px;
+.card_act > h3 {
+  margin: 15px 0 15px 20px;
 }
 
-/* Hauteur des cards et des images */
-/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
-
-.card1, .card4 {
-    height: 400px;
+.card1,
+.card4 {
+  height: 400px;
 }
 
-.photo1, .photo4 {
-    height: 350px;
+.picture1,
+.picture4 {
+  height: 350px;
 }
 
 .card2 {
-    height: 220px;
+  height: 220px;
 }
 
-.photo2 {
-    height: 170px;
+.picture2 {
+  height: 170px;
 }
 
 .card3 {
-    height: 150px;
+  height: 150px;
 }
 
-.photo3 {
-    height: 100px;
+.picture3 {
+  height: 100px;
 }
 
 .card5 {
-    height: 180px;
+  height: 180px;
 }
 
-.photo5 {
-    height: 130px;
+.picture5 {
+  height: 130px;
 }
 
 .card6 {
-    height: 190px;
+  height: 190px;
 }
 
-.photo6 {
-    height: 140px;
+.picture6 {
+  height: 140px;
 }
 
 /* _____________________ DEBUT FOOTER _____________________ */
 /* _____________________ DEBUT FOOTER _____________________ */
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 120%;
-    margin-left: -10%;
-    background-color: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f2f2f2;
+  margin-top: 30px;
 }
 
 .content_footer {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 100px;
-    margin-left: -38%;
+  display: flex;
+  flex-flow: row nowrap;
+  min-width: 1360px;
+  gap: 100px;
 }
 
-footer h3 {
-    font-variation-settings: 'wght'500;
-}
-
-footer p {
-    font-variation-settings: 'wght'450;
+.content_footer div {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  margin: 20px 0;
 }
 
 footer p:hover {
-    color: #6a71b3;
+  color: #6a71b3;
 }
 
 /*__________________________________________________________________ MEDIA QUERIES __________________________________________________________________*/
 
-@media all and (max-width:1465px) {
+@media all and (max-width: 1389px) {
+  header,
+  main {
+    min-width: initial;
+    width: 100%;
+  }
 
-    /* juste pour le footer */
-    footer {
-        width: 100%;
-        margin-left: 0%;
-        justify-content: center;
-    }
+  .header_main {
+    margin-left: 15px;
+  }
+
+  #section_and_aside {
+    flex-direction: column-reverse;
+  }
+
+  #Hébergements,
+  #Populaires {
+    border-radius: 0;
+  }
+
+  .card_heb:hover,
+  .card_pop:hover,
+  .card_act:hover {
+    transform: scale(1.025);
+  }
+
+  .all_cards_heb {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .card_heb,
+  .card_pop {
+    min-width: 31%;
+  }
+
+  .all_cards_pop {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 100%;
+    gap: 20px;
+  }
+
+  #Activités {
+    padding: 30px;
+  }
+
+  .all_cards_act {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: unset;
+    height: auto;
+    row-gap: 30px;
+  }
+
+  .card_act {
+    width: 48.5%;
+    height: 200px;
+  }
+
+  .card_act_img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .content_footer {
+    min-width: 95%;
+    justify-content: space-between;
+  }
 }
 
-@media all and (max-width:1355px) {
+@media all and (max-width: 992px) {
+  .all_cards_pop {
+    width: 100%;
+    flex-direction: column;
+  }
 
-    .logo {
-        margin-left: -10px;
-    }
+  .card_pop {
+    width: 100%;
+  }
 
-    .header_main {
-        margin-left: 15px;
-    }
+  footer {
+    display: initial;
+  }
+
+  .content_footer {
+    justify-content: space-around;
+    margin-left: initial;
+    gap: 125px;
+  }
 }
 
-@media all and (max-width:1265px) {
+@media all and (max-width: 866px) {
+  .filters_list {
+    margin-top: 10px;
+  }
 
+  .card_heb {
+    min-width: 100%;
+  }
 
-    #section_et_aside {
-        flex-direction: column-reverse;
-    }
-
-    #section_et_aside .card_heb:hover {
-        transform: scale(1.025);
-    }
-
-    #section_et_aside .card_pop:hover {
-        transform: scale(1.025);
-    }
-
-    .card_heb {
-        /* chaque carte */
-        width: 100%;
-    }
-
-    #all_cards_pop {
-        /* div */
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        height: 100%;
-        gap: 20px;
-    }
-
-    .card_pop {
-        /* chaque carte */
-        width: 32%;
-    }
-
-    #Activités {
-        padding: 30px;
-    }
-
-    .all_cards_act {
-        flex-flow: row wrap;
-        justify-content: space-between;
-        column-gap: unset;
-        height: auto;
-        row-gap: 30px;
-    }
-
-    .card_act {
-        width: 48.5%;
-        height: 200px;
-    }
-
-
-    .card_act .img_act {
-        width: 100%;
-        height: 150px;
-    }
-
-    #Activités .card_act:hover {
-        transform: scale(1.025);
-    }
-
-    footer {
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .content_footer {
-        margin-left: initial;
-        gap: 225px;
-    }
-
+  .content_footer {
+    justify-content: space-around;
+    gap: 80px;
+  }
 }
 
-@media all and (max-width:992px) {
-    #bodiv {
-        margin: 0px;
-    }
+@media all and (max-width: 768px) {
+  header {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
 
-    #all_cards_pop {
-        width: 100%;
-        flex-direction: column;
-    }
+  .list_nav {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .card_pop {
-        width: 100%;
-    }
+  .list_nav li {
+    width: 50%;
+  }
 
-    footer {
-        display: initial;
-    }
+  .list_nav li:hover {
+    border-top: none;
+  }
 
-    #footer .section {
-        width: auto;
-        flex-flow: row nowrap;
-    }
+  .nav_link_1 {
+    border-bottom: 3px solid #0065fc;
+    border-top: none;
+  }
 
-    .content_footer {
-        justify-content: space-around;
-        margin-left: initial;
-        gap: 125px;
-    }
+  .nav_link_2 {
+    border-bottom: 3px solid #f2f2f2;
+    border-top: none;
+  }
+
+  .research_div {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .research_form_input {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .research_form_btn_text {
+    display: none;
+  }
+
+  .research_form_btn_icn {
+    display: initial;
+    position: relative;
+    right: 10px;
+    min-width: 45px;
+    max-width: 45px;
+    font-size: 14px;
+    background-color: #0065fc;
+    color: white;
+    border: 0px;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  .filters_list {
+    padding-right: 20px;
+    gap: 15px;
+  }
+
+  #Activités {
+    padding: 0 30px;
+  }
+
+  .all_cards_act {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .card_act {
+    width: 98%;
+  }
+
+  footer {
+    justify-content: flex-start;
+    padding: 0 30px;
+  }
+
+  .content_footer {
+    flex-direction: column;
+    width: 83%;
+    gap: 15px;
+  }
 }
 
-
-@media all and (max-width:866px) {
-    #Hébergements {
-        background-color: initial;
-        /* pour enlever le background en le remettant à sa valeur initiale donc blanc */
-    }
-
-    .ligne_un, .ligne_deux {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card_heb {
-        /* chaque carte */
-        width: 100%;
-    }
-
-    .content_footer {
-        justify-content: space-around;
-        gap: 80px;
-    }
-}
-
-@media all and (max-width:768px) {
-
-    body {
-        margin: 0px;
-    }
-
-    #bodiv {
-        width: auto;
-    }
-
-    #header {
-        flex-flow: column nowrap;
-        justify-content: center;
-        margin: 0px;
-    }
-
-    .listenav {
-        display: flex;
-        justify-content: space-between;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .lienpuce {
-        width: 50%;
-    }
-
-    .lienpuce:hover {
-        border-top: none;
-    }
-
-    .lienpuce1 {
-        border-bottom: 3px solid #0065FC;
-        border-top: none;
-    }
-
-    .lienpuce2 {
-        border-bottom: 3px solid #F2F2F2;
-        border-top: none;
-    }
-
-    .div_logo {
-        display: flex;
-        width: 100%;
-    }
-
-    .divBDR {
-        margin: 20px 0px 0px 0px;
-    }
-
-    .saisieBDR {
-        width: 100%;
-        flex-grow: 1;
-        /* La barre de saisie s'étend sur toute la largeur du bloc parent */
-    }
-
-    .buttonBDR {
-        display: none;
-    }
-
-    .buttonIC {
-        display: initial;
-        height: 45px;
-        min-width: 45px;
-        font-size: 14px;
-        color: white;
-        flex-grow: 2;
-        background-color: #0065FC;
-        border: 0px;
-        border-radius: 15px 15px 15px 15px;
-        position: relative;
-        right: 10px;
-    }
-
-    .buttonIC:hover {
-        background-color: #0058dd;
-    }
-
-    .buttonIC:active {
-        box-shadow: 0px 0px 3px rgba(5, 79, 216, 0.6);
-    }
-
-    .listbtnfilter {
-        padding-right: 20px;
-        gap: 15px;
-    }
-
-    #Populaires {
-        border-radius: 0px;
-    }
-
-    #Activités {
-        padding: 0 30px;
-    }
-
-    .all_cards_act {
-        /* bloc parent de toutes les cards */
-        flex-flow: column nowrap;
-        align-items: center;
-    }
-
-    .card_act {
-        /* chaque carte */
-        width: 98%;
-    }
-
-    footer {
-        justify-content: flex-start;
-        padding: 0 30px;
-    }
-
-    .content_footer {
-        flex-direction: column;
-        width: 83%;
-        gap: 15px;
-    }
+@media all and (max-width: 300px) {
+  #Hébergements,
+  #Populaires,
+  #Activités {
+    padding: 5px 0;
+  }
 }
