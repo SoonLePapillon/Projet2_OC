@@ -8,7 +8,7 @@
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__html"><h1 id="p1---booki">P1 - Booki</h1>
+  <div class="stackedit__html"><h1 id="p1---booki">P2 - Booki</h1>
 <p><strong>FR</strong><br>
 Booki est le tout premier site que j’ai réalisé depuis que j’ai commencé à développer. Il s’agit d’un projet dans le cadre de la formation  <strong>Développeur Web</strong>  d’OpenClassrooms. L’objectif était de reproduire au mieux une maquette qui nous a été fournie en HTML / CSS uniquement.</p>
 <p>Lien direct :  <a href="https://soonbtf.github.io/P2_Booki/">https://soonbtf.github.io/P2_Booki/</a></p>
